@@ -17,7 +17,9 @@ Des del directori del projecte:
 python3 -m http.server 8080
 ```
 
-Obre [http://localhost:8080/ca/](http://localhost:8080/ca/) (les rutes absolutes `/css/...` funcionen des de l’arrel del servidor).
+Obre [http://localhost:8080/ca/](http://localhost:8080/ca/) (amb `python3 -m http.server` des de l’arrel del projecte).
+
+A **GitHub Pages** el repo es publica sota `/mednode-web/`; `js/site-base.js` ajusta la base automàticament. Amb domini `mednode.cat` la base és `/`.
 
 ## Desplegament (GitHub Pages)
 
