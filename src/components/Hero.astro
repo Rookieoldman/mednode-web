@@ -10,64 +10,144 @@ const { t, exploreLabel } = Astro.props;
 ---
 <section
   id="hero"
-  class="relative overflow-hidden bg-gradient-to-br from-clinical-950 via-clinical-900 to-medblue-900 text-white"
+  class="hero-hospital relative overflow-hidden bg-gradient-to-br from-clinical-950 via-clinical-900 to-medblue-900 text-white"
 >
-  <div class="hospital-grid-bg pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
-  <div
-    class="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-teal-hospital/20 blur-3xl"
-    aria-hidden="true"
-  ></div>
-  <div
-    class="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-medblue-500/15 blur-3xl"
-    aria-hidden="true"
-  ></div>
+  <!-- Fondo: cuadrícula + icono red de nodos -->
+  <div class="hero-hospital__bg pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="hospital-grid-bg absolute inset-0 opacity-70"></div>
+    <div class="hero-hospital__network">
+      <NodesNetwork />
+    </div>
+    <div class="hero-hospital__glow hero-hospital__glow--teal"></div>
+    <div class="hero-hospital__glow hero-hospital__glow--blue"></div>
+    <!-- Degradado para legibilidad del texto -->
+    <div class="hero-hospital__scrim"></div>
+  </div>
 
-  <div class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:py-32">
-    <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-12">
-      <div class="animate-hospital-in">
-        <p
-          class="mb-5 inline-flex items-center gap-2 rounded-md border border-teal-hospital/40 bg-teal-hospital/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-teal-hospital"
+  <div class="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:py-32">
+    <div class="animate-hospital-in max-w-2xl">
+      <p
+        class="mb-5 inline-flex items-center gap-2 rounded-md border border-teal-hospital/40 bg-teal-hospital/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-teal-hospital"
+      >
+        <span class="h-2 w-2 animate-pulse rounded-full bg-teal-hospital" aria-hidden="true"></span>
+        {t.badge}
+      </p>
+      <h1 class="font-heading text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.25rem]">
+        {t.title}
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-clinical-100/90">
+        {t.subtitle}
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <button
+          type="button"
+          data-open-contact
+          class="btn-hospital-primary cursor-pointer rounded-lg px-8 py-3.5 font-heading text-base font-semibold text-white"
         >
-          <span class="h-2 w-2 animate-pulse rounded-full bg-teal-hospital" aria-hidden="true"></span>
-          {t.badge}
-        </p>
-        <h1
-          class="font-heading text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.25rem]"
+          {t.cta}
+        </button>
+        <a
+          href="#products"
+          class="rounded-lg border border-white/25 px-6 py-3.5 font-heading text-sm font-semibold text-white transition hover:border-white/50 hover:bg-white/5"
         >
-          {t.title}
-        </h1>
-        <p class="mt-6 max-w-xl text-lg leading-relaxed text-clinical-100/90">
-          {t.subtitle}
-        </p>
-        <div class="mt-10 flex flex-wrap items-center gap-4">
-          <button
-            type="button"
-            data-open-contact
-            class="btn-hospital-primary cursor-pointer rounded-lg px-8 py-3.5 font-heading text-base font-semibold text-white"
-          >
-            {t.cta}
-          </button>
-          <a
-            href="#products"
-            class="rounded-lg border border-white/25 px-6 py-3.5 font-heading text-sm font-semibold text-white transition hover:border-white/50 hover:bg-white/5"
-          >
-            {exploreLabel}
-          </a>
-        </div>
-      </div>
-
-      <div class="animate-hospital-in animate-hospital-in-delay-2 flex justify-center lg:justify-end">
-        <div
-          class="relative rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-md"
-        >
-          <div
-            class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-teal-hospital to-transparent opacity-80"
-            style="animation: hospital-pulse-line 3s ease-in-out infinite"
-            aria-hidden="true"
-          ></div>
-          <NodesNetwork />
-        </div>
+          {exploreLabel}
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-hospital__bg {
+    z-index: 0;
+  }
+
+  .hero-hospital__network {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.42;
+  }
+
+  .hero-hospital__network :global(.nodes-network) {
+    width: min(52rem, 95vw);
+    max-width: none;
+    transform: scale(1.05);
+  }
+
+  .hero-hospital__network :global(.nodes-network__svg) {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Enlaces y nodos más visibles sobre el fondo oscuro */
+  .hero-hospital__network :global(.network-link) {
+    opacity: 0.55;
+    stroke: #5eb8e8;
+  }
+
+  .hero-hospital__network :global(.network-link--delay-1),
+  .hero-hospital__network :global(.network-link--delay-3) {
+    stroke: #5eead4;
+  }
+
+  .hero-hospital__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+
+  .hero-hospital__glow--teal {
+    right: 10%;
+    top: 15%;
+    height: 20rem;
+    width: 20rem;
+    background: rgba(13, 148, 136, 0.22);
+  }
+
+  .hero-hospital__glow--blue {
+    left: -5%;
+    bottom: 10%;
+    height: 18rem;
+    width: 18rem;
+    background: rgba(0, 119, 182, 0.18);
+  }
+
+  .hero-hospital__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(8, 28, 51, 0.92) 0%,
+      rgba(8, 28, 51, 0.75) 42%,
+      rgba(15, 40, 71, 0.35) 68%,
+      rgba(15, 40, 71, 0.15) 100%
+    );
+  }
+
+  @media (min-width: 768px) {
+    .hero-hospital__network {
+      justify-content: flex-end;
+      padding-right: 4%;
+      opacity: 0.48;
+    }
+
+    .hero-hospital__network :global(.nodes-network) {
+      width: min(44rem, 58vw);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-hospital__network :global(.network-link),
+    .hero-hospital__network :global(.node-core),
+    .hero-hospital__network :global(.node-ring) {
+      animation: none;
+    }
+
+    .hero-hospital__network :global(.network-signals) {
+      display: none;
+    }
+  }
+</style>
