@@ -1,0 +1,38 @@
+---
+import type { Lang } from '../i18n/languages';
+
+interface Section {
+  heading: string;
+  body: string;
+}
+
+interface Props {
+  lang: Lang;
+  title: string;
+  updated: string;
+  intro: string;
+  sections: Section[];
+  back: string;
+}
+
+const { lang, title, updated, intro, sections, back } = Astro.props;
+const home = `/${lang}/`;
+---
+<article class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+  <h1 class="font-heading text-3xl font-bold text-medblue-900">{title}</h1>
+  <p class="mt-2 text-sm text-medblue-600">{updated}</p>
+  <p class="mt-6 leading-relaxed text-medblue-800">{intro}</p>
+  {
+    sections.map((section) => (
+      <section class="mt-8">
+        <h2 class="font-heading text-xl font-semibold text-medblue-900">{section.heading}</h2>
+        <p class="mt-2 leading-relaxed text-medblue-800">{section.body}</p>
+      </section>
+    ))
+  }
+  <p class="mt-10">
+    <a href={home} class="font-semibold text-medblue-600 underline hover:text-medblue-500">
+      {back}
+    </a>
+  </p>
+</article>

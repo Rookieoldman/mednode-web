@@ -33,4 +33,12 @@ export interface Translations {
     copyright: string;
     marks: string;
   };
+  privacy: {
+    meta: { title: string; description: string };
+    title: string;
+    updated: string;
+    intro: string;
+    sections: { heading: string; body: string }[];
+    back: string;
+  };
 }

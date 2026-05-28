@@ -71,5 +71,37 @@
     "tagline": "Software sanitario para gestión hospitalaria",
     "copyright": "© 2026 MedNode. Todos los derechos reservados.",
     "marks": "MedSign® y MedFlow® son marcas registradas."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de privacidad — MedNode",
+      "description": "Información sobre el tratamiento de datos personales en el sitio web de MedNode y el formulario de contacto."
+    },
+    "title": "Política de privacidad",
+    "updated": "Última actualización: mayo de 2026",
+    "intro": "En MedNode tratamos tus datos con transparencia y conforme al Reglamento (UE) 2016/679 (RGPD) y la normativa española aplicable.",
+    "sections": [
+      {
+        "heading": "Responsable del tratamiento",
+        "body": "MedNode. Para ejercer tus derechos o consultas sobre privacidad: info@mednode.es."
+      },
+      {
+        "heading": "Formulario de contacto",
+        "body": "Si nos escribes, tratamos nombre, correo electrónico, organización (opcional) y mensaje para atender tu solicitud comercial o informativa. Base legal: consentimiento (casilla de aceptación) e interés legítimo en responder consultas profesionales."
+      },
+      {
+        "heading": "Destinatarios y encargados",
+        "body": "Los datos se envían por correo electrónico a través de proveedores de hosting y formularios (GitHub Pages, FormSubmit, ImprovMX) necesarios para operar la web. No vendemos tus datos."
+      },
+      {
+        "heading": "Conservación",
+        "body": "Conservamos los mensajes el tiempo necesario para gestionar la relación y las obligaciones legales aplicables."
+      },
+      {
+        "heading": "Tus derechos",
+        "body": "Puedes acceder, rectificar, suprimir, limitar u oponerte al tratamiento, y retirar el consentimiento, escribiendo a info@mednode.es. También puedes reclamar ante la AEPD."
+      }
+    ],
+    "back": "Volver al inicio"
   }
 }

@@ -71,5 +71,37 @@
     "tagline": "Programari sanitari per a gestió hospitalària",
     "copyright": "© 2026 MedNode. Tots els drets reservats.",
     "marks": "MedSign® i MedFlow® són marques registrades."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de privacitat — MedNode",
+      "description": "Informació sobre el tractament de dades personals al web de MedNode i al formulari de contacte."
+    },
+    "title": "Política de privacitat",
+    "updated": "Darrera actualització: maig de 2026",
+    "intro": "A MedNode tractem les teves dades amb transparència i d'acord amb el Reglament (UE) 2016/679 (RGPD) i la normativa aplicable.",
+    "sections": [
+      {
+        "heading": "Responsable del tractament",
+        "body": "MedNode. Per exercir els teus drets o consultes de privacitat: info@mednode.es."
+      },
+      {
+        "heading": "Formulari de contacte",
+        "body": "Si ens escrius, tractem nom, correu electrònic, organització (opcional) i missatge per atendre la teva sol·licitud. Base legal: consentiment (casella d'acceptació) i interès legítim en respondre consultes professionals."
+      },
+      {
+        "heading": "Destinataris i encarregats",
+        "body": "Les dades s'envien per correu mitjançant proveïdors necessaris per operar el web (GitHub Pages, FormSubmit, ImprovMX). No venem les teves dades."
+      },
+      {
+        "heading": "Conservació",
+        "body": "Conservem els missatges el temps necessari per gestionar la relació i les obligacions legals aplicables."
+      },
+      {
+        "heading": "Els teus drets",
+        "body": "Pots accedir, rectificar, suprimir, limitar o oposar-te al tractament i retirar el consentiment escrivint a info@mednode.es. També pots reclamar davant l'APDCAT."
+      }
+    ],
+    "back": "Tornar a l'inici"
   }
 }

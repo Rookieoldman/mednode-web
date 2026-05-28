@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import PrivacyPolicy from '../../components/PrivacyPolicy.astro';
+import t from '../../i18n/ca.json';
+
+const lang = 'ca';
+const p = t.privacy;
+---
+<Layout title={p.meta.title} description={p.meta.description} lang={lang}>
+  <Navbar t={t.nav} lang={lang} />
+  <main>
+    <PrivacyPolicy lang={lang} title={p.title} updated={p.updated} intro={p.intro} sections={p.sections} back={p.back} />
+  </main>
+  <Footer t={t.footer} lang={lang} />
+</Layout>

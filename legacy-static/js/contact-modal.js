@@ -34,6 +34,10 @@
         "Hola,\n\nGracias por contactar con MedNode. Hemos recibido tu mensaje correctamente.\n\nTe responderemos en 1–2 días laborables a la dirección de correo que nos has indicado.\n\n—\nCorreo automático (no responder a esta dirección).\nConsultas: info@mednode.es\nhttps://mednode.es\n\nEquipo MedNode",
       required: "Completa los campos obligatorios.",
       invalidEmail: "Introduce un correo válido.",
+      privacyBefore: "He leído la ",
+      privacyLink: "política de privacidad",
+      privacyAfter: " y la información sobre protección de datos",
+      privacyRequired: "Debes aceptar la política de privacidad para enviar el mensaje.",
     },
     ca: {
       title: "Escriu-nos",
@@ -58,6 +62,10 @@
         "Hola,\n\nGràcies per contactar amb MedNode. Hem rebut el teu missatge correctament.\n\nEt respondrem en 1–2 dies laborables a l'adreça de correu que ens has indicat.\n\n—\nCorreu automàtic (no responguis a aquesta adreça).\nConsultes: info@mednode.es\nhttps://mednode.es\n\nEquip MedNode",
       required: "Omple els camps obligatoris.",
       invalidEmail: "Introdueix un correu vàlid.",
+      privacyBefore: "He llegit la ",
+      privacyLink: "política de privacitat",
+      privacyAfter: " i la informació sobre protecció de dades",
+      privacyRequired: "Has d'acceptar la política de privacitat per enviar el missatge.",
     },
     eu: {
       title: "Idatzi gaitzazu",
@@ -82,6 +90,10 @@
         "Kaixo,\n\nEskerrik asko MedNode-rekin harremanetan jartzeagatik. Zure mezua ongi jaso dugu.\n\n1–2 lanegunetan erantzungo dizugu adierazi duzun helbide elektronikora.\n\n—\nMezu automatikoa (ez erantzun helbide honetara).\nKontsultak: info@mednode.es\nhttps://mednode.es\n\nMedNode taldea",
       required: "Bete nahitaezko eremuak.",
       invalidEmail: "Sartu baliozko helbide elektroniko bat.",
+      privacyBefore: "Irakurri ditut ",
+      privacyLink: "pribatutasun-politika",
+      privacyAfter: " eta datu pertsonalen babesari buruzko informazioa",
+      privacyRequired: "Mezua bidaltzeko pribatutasun-politika onartu behar duzu.",
     },
     gl: {
       title: "Escríbenos",
@@ -106,11 +118,26 @@
         "Ola,\n\nGrazas por contactar con MedNode. Recibimos a túa mensaxe correctamente.\n\nResponderémosche en 1–2 días laborables ao correo que indicaches.\n\n—\nCorreo automático (non respondas a este enderezo).\nConsultas: info@mednode.es\nhttps://mednode.es\n\nEquipo MedNode",
       required: "Completa os campos obrigatorios.",
       invalidEmail: "Introduce un correo válido.",
+      privacyBefore: "Lin a ",
+      privacyLink: "política de privacidade",
+      privacyAfter: " e a información sobre protección de datos",
+      privacyRequired: "Debes aceptar a política de privacidade para enviar a mensaxe.",
     },
+  };
+
+  var PRIVACY_PATH = {
+    es: "/es/privacidad/",
+    ca: "/ca/privacitat/",
+    eu: "/eu/pribatutasuna/",
+    gl: "/gl/privacidade/",
   };
 
   function t(lang) {
     return I18N[lang] || I18N.es;
+  }
+
+  function privacyUrl(lang) {
+    return PRIVACY_PATH[lang] || PRIVACY_PATH.es;
   }
 
   function buildNextUrl() {
@@ -141,6 +168,7 @@
 
   function createModal(lang) {
     var strings = t(lang);
+    var policyHref = privacyUrl(lang);
     var root = document.createElement("div");
     root.className = "contact-modal";
     root.id = "contact-modal";
@@ -202,6 +230,18 @@
       '      <textarea id="contact-message" name="message" rows="5" required placeholder="' +
       escapeAttr(strings.messagePh) +
       '"></textarea>' +
+      "    </div>" +
+      '    <div class="contact-form__consent">' +
+      '      <input type="checkbox" id="contact-privacy" name="privacy_accepted" value="yes" required>' +
+      '      <label for="contact-privacy">' +
+      escapeHtml(strings.privacyBefore) +
+      '<a href="' +
+      escapeAttr(policyHref) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      escapeHtml(strings.privacyLink) +
+      "</a>" +
+      escapeHtml(strings.privacyAfter) +
+      ' <span aria-hidden="true">*</span></label>' +
       "    </div>" +
       '    <p class="contact-form__status" id="contact-form-status" role="status" aria-live="polite"></p>' +
       '    <div class="contact-form__actions">' +
@@ -335,6 +375,15 @@
       if (!isValidEmail(data.email)) {
         statusEl.textContent = strings.invalidEmail;
         statusEl.className = "contact-form__status contact-form__status--error";
+        return;
+      }
+      var privacyCheck = document.getElementById("contact-privacy");
+      if (!privacyCheck || !privacyCheck.checked) {
+        statusEl.textContent = strings.privacyRequired;
+        statusEl.className = "contact-form__status contact-form__status--error";
+        if (privacyCheck) {
+          privacyCheck.focus();
+        }
         return;
       }
       if (form._gotcha.value) {

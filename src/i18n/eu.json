@@ -71,5 +71,37 @@
     "tagline": "Osasun-softwarea ospitale-kudeaketarako",
     "copyright": "© 2026 MedNode. Eskubide guztiak erreserbatuta.",
     "marks": "MedSign® eta MedFlow® erregistratutako markak dira."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Pribatutasun-politika — MedNode",
+      "description": "MedNode webgunean eta harremanetarako formularioan datu pertsonalen tratamenduari buruzko informazioa."
+    },
+    "title": "Pribatutasun-politika",
+    "updated": "Azken eguneraketa: 2026ko maiatza",
+    "intro": "MedNode-n zure datuak gardentasunez tratatzen ditugu, 2016/679 (EB) Erregelamendua (DBEO) eta aplikagarri den araudiaren arabera.",
+    "sections": [
+      {
+        "heading": "Tratamenduaren arduraduna",
+        "body": "MedNode. Eskubideak erabiltzeko edo pribatutasunari buruz galdetzeko: info@mednode.es."
+      },
+      {
+        "heading": "Harremanetarako formularioa",
+        "body": "Idazten badiguzu, izena, helbide elektronikoa, erakundea (aukerakoa) eta mezua tratatzen ditugu zure eskaera kudeatzeko. Oinarri juridikoa: baimena (onartzeko laukitxoa) eta kontsultei erantzuteko interes legitimoa."
+      },
+      {
+        "heading": "Hartzaileak eta prozesatzaileak",
+        "body": "Datuak posta elektroniko bidez bidaltzen dira webgunea martxan jartzeko beharrezkoak diren hornitzaileen bidez (GitHub Pages, FormSubmit, ImprovMX). Ez ditugu zure datuak saltzen."
+      },
+      {
+        "heading": "Epea",
+        "body": "Mezuak harremana kudeatzeko eta legezko betebeharrak betetzeko beharrezko denboran gordetzen ditugu."
+      },
+      {
+        "heading": "Zure eskubideak",
+        "body": "Sarbidea, zuzentzea, ezabatzea, mugatzea edo tratamenduari aurka egitea eta baimena kentzea eska ditzakezu info@mednode.es helbidera idatziz. AEPDn ere erreklamatu dezakezu."
+      }
+    ],
+    "back": "Hasierara itzuli"
   }
 }

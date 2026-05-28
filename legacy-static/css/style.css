@@ -918,6 +918,42 @@ button.btn {
   text-align: center;
 }
 
+.contact-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-form__consent input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--blue-mid, #0077b6);
+  cursor: pointer;
+}
+
+.contact-form__consent label {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-muted, #4a5568);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.contact-form__consent a {
+  color: var(--blue-mid, #0077b6);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.contact-form__consent a:hover,
+.contact-form__consent a:focus-visible {
+  color: var(--blue-dark, #023e8a);
+}
+
 /* Footer */
 .site-footer {
   background: var(--blue-dark);
