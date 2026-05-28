@@ -26,6 +26,7 @@ export interface Translations {
     subtitle: string;
     cta: string;
     email: string;
+    hint: string;
   };
   footer: {
     tagline: string;

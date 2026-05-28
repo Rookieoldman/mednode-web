@@ -64,7 +64,8 @@
     "title": "Jakin nahi duzu MedNode-k nola lagundu diezaiokeen zure ospitaleari?",
     "subtitle": "Kontatu zure beharrak eta konpromisorik gabe aholkatuko zaitugu.",
     "cta": "Idatzi iezaguzu",
-    "email": "info@mednode.es"
+    "email": "info@mednode.es",
+    "hint": "Zuzenean ere idatz dezakezu <a href=\"mailto:info@mednode.es\" class=\"text-medblue-500 underline\">info@mednode.es</a> helbidera"
   },
   "footer": {
     "tagline": "Osasun-softwarea ospitale-kudeaketarako",

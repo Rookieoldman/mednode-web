@@ -1,25 +1,35 @@
 ---
 interface Props {
-  t: { title: string; subtitle: string; cta: string; email: string };
+  t: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    email: string;
+    hint: string;
+  };
 }
 
 const { t } = Astro.props;
-const mailto = `mailto:${t.email}?subject=Consulta%20desde%20la%20web%20MedNode`;
 ---
 <section id="contact" class="bg-gradient-to-b from-mednode-50 to-white py-16 md:py-20">
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
     <h2 class="font-heading text-3xl font-bold text-medblue-900 md:text-4xl">{t.title}</h2>
     <p class="mt-4 text-lg text-gray-600">{t.subtitle}</p>
     <p class="mt-6">
-      <a href={`mailto:${t.email}`} class="text-lg font-semibold text-medblue-500 hover:text-medblue-700 underline underline-offset-4">
+      <a
+        href={`mailto:${t.email}`}
+        class="text-lg font-semibold text-medblue-500 hover:text-medblue-700 underline underline-offset-4"
+      >
         {t.email}
       </a>
     </p>
-    <a
-      href={mailto}
-      class="mt-8 inline-block rounded-lg bg-mednode-500 px-10 py-4 font-heading text-lg font-semibold text-white shadow-md transition hover:bg-mednode-600"
+    <button
+      type="button"
+      data-open-contact
+      class="mt-8 cursor-pointer rounded-lg bg-mednode-500 px-10 py-4 font-heading text-lg font-semibold text-white shadow-md transition hover:bg-mednode-600"
     >
       {t.cta}
-    </a>
+    </button>
+    <p class="mt-4 text-sm text-gray-500" set:html={t.hint} />
   </div>
 </section>

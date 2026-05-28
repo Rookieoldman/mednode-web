@@ -64,7 +64,8 @@
     "title": "Vols saber com MedNode pot ajudar el teu hospital?",
     "subtitle": "Explica'ns les teves necessitats i t'assessorem sense compromís.",
     "cta": "Escriu-nos",
-    "email": "info@mednode.es"
+    "email": "info@mednode.es",
+    "hint": "També pots escriure directament a <a href=\"mailto:info@mednode.es\" class=\"text-medblue-500 underline\">info@mednode.es</a>"
   },
   "footer": {
     "tagline": "Programari sanitari per a gestió hospitalària",

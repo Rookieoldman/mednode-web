@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./contact-modal.css";
 
 @theme {
   --color-mednode-50: #e6f4f1;

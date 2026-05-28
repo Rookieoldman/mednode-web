@@ -1,0 +1,195 @@
+/* Modal de contacto (FormSubmit) — usado por public/js/contact-modal.js */
+
+.contact-modal-open {
+  overflow: hidden;
+}
+
+.contact-modal[hidden] {
+  display: none;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 62, 138, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.contact-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 32rem);
+  max-height: min(90vh, 720px);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.contact-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  background: #f8f9fa;
+  color: #4a5568;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-modal__close:hover,
+.contact-modal__close:focus-visible {
+  background: #e6f0f8;
+  color: #023e8a;
+}
+
+.contact-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: #023e8a;
+  margin: 0 2rem 0.5rem 0;
+}
+
+.contact-modal__intro {
+  margin: 0 0 1.25rem;
+  color: #4a5568;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.contact-form__field {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-form__field label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #023e8a;
+  margin-bottom: 0.35rem;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1a202c;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  outline: 2px solid #0077b6;
+  outline-offset: 1px;
+  border-color: #0077b6;
+}
+
+.contact-form__field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-form__status {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  min-height: 1.25rem;
+}
+
+.contact-form__status--ok {
+  color: #0d7a4a;
+}
+
+.contact-form__status--error {
+  color: #b42318;
+}
+
+.contact-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.contact-form__actions .btn {
+  flex: 1 1 auto;
+  min-width: 8rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2a9d8f;
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #40bfa3;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #023e8a;
+  outline-offset: 3px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #023e8a;
+  border: 2px solid rgba(2, 62, 138, 0.2);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: #0077b6;
+  color: #0077b6;
+  background: rgba(0, 119, 182, 0.06);
+}
