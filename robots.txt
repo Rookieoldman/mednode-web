@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Pàgina arrel només redirigeix; les URLs indexables són /ca/, /es/, /eu/, /gl/
+Disallow: /index.html
+
+Sitemap: https://mednode.cat/sitemap.xml

@@ -50,6 +50,21 @@ A **GitHub Pages** el repo es publica sota `/mednode-web/`; `js/site-base.js` aj
 
 Selector manual: capçalera i peu (CA | ES | EU | GL).
 
+## SEO i Google Search Console
+
+- `robots.txt` i `sitemap.xml` a l’arrel (URLs canòniques `https://mednode.cat/...`).
+- Cada idioma: `hreflang`, Open Graph, Twitter Card i JSON-LD (`Organization`, `WebSite`, `WebPage`, `MedSign`/`MedFlow`).
+- La pàgina arrel (`index.html`) té `noindex` (només redirigeix).
+
+**Després de tenir `mednode.cat` actiu:**
+
+1. [Google Search Console](https://search.google.com/search-console) → Afegeix la propietat `https://mednode.cat`.
+2. Verifica el domini (DNS TXT a Hostinger o fitxer HTML).
+3. **Sitemaps** → envia `https://mednode.cat/sitemap.xml`.
+4. **Inspecció d’URL** → sol·licita indexació de `/ca/` i `/es/`.
+
+Opcional: afegir una imatge OG en PNG 1200×630 (`img/og-image.png`) per a xarxes socials que no accepten SVG.
+
 ## Contacte
 
 info@mednode.es

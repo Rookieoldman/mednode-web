@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mednode.cat/ca/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mednode.cat/es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/"/>
+  </url>
+  <url>
+    <loc>https://mednode.cat/es/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mednode.cat/es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/"/>
+  </url>
+  <url>
+    <loc>https://mednode.cat/eu/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mednode.cat/es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/"/>
+  </url>
+  <url>
+    <loc>https://mednode.cat/gl/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mednode.cat/es/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/"/>
+  </url>
+</urlset>
