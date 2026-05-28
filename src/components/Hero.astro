@@ -1,4 +1,6 @@
 ---
+import NodesNetwork from './NodesNetwork.astro';
+
 interface Props {
   t: { badge: string; title: string; subtitle: string; cta: string };
 }
@@ -26,20 +28,8 @@ const mailto = 'mailto:info@mednode.es?subject=Consulta%20desde%20la%20web%20Med
       </a>
     </div>
 
-    <div class="flex justify-center lg:justify-end" aria-hidden="true">
-      <svg class="w-full max-w-md" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <line x1="100" y1="45" x2="55" y2="130" stroke="#0077B6" stroke-width="2" opacity="0.35" />
-        <line x1="100" y1="45" x2="145" y2="130" stroke="#0077B6" stroke-width="2" opacity="0.35" />
-        <line x1="55" y1="130" x2="145" y2="130" stroke="#2A9D8F" stroke-width="2" opacity="0.35" />
-        <line x1="100" y1="45" x2="100" y2="100" stroke="#023E8A" stroke-width="2" opacity="0.25" />
-        <line x1="100" y1="100" x2="55" y2="130" stroke="#023E8A" stroke-width="2" opacity="0.25" />
-        <line x1="100" y1="100" x2="145" y2="130" stroke="#023E8A" stroke-width="2" opacity="0.25" />
-        <circle class="animate-node-pulse" cx="100" cy="40" r="14" fill="#0077B6" />
-        <circle cx="100" cy="100" r="11" fill="#2A9D8F" />
-        <circle cx="50" cy="135" r="12" fill="#0077B6" />
-        <circle cx="150" cy="135" r="12" fill="#2A9D8F" />
-        <circle cx="100" cy="165" r="9" fill="#023E8A" opacity="0.6" />
-      </svg>
+    <div class="flex justify-center lg:justify-end">
+      <NodesNetwork />
     </div>
   </div>
 </section>
