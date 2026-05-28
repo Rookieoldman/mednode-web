@@ -1,0 +1,19 @@
+---
+// Redirect per domini: mednode.cat → /ca/, mednode.es → /es/
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>MedNode</title>
+    <script is:inline>
+      const host = window.location.hostname;
+      if (host.endsWith('.cat') || host === 'mednode.cat') {
+        window.location.replace('/ca/');
+      } else {
+        window.location.replace('/es/');
+      }
+    </script>
+    <meta http-equiv="refresh" content="0;url=/es/" />
+  </head>
+  <body></body>
+</html>

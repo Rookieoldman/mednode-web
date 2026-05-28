@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mednode-50: #e6f4f1;
+  --color-mednode-100: #cce9e3;
+  --color-mednode-200: #99d3c7;
+  --color-mednode-300: #66bdab;
+  --color-mednode-400: #40bfa3;
+  --color-mednode-500: #2a9d8f;
+  --color-mednode-600: #228073;
+  --color-mednode-700: #1a6358;
+  --color-mednode-800: #12463d;
+  --color-mednode-900: #0a2922;
+
+  --color-medblue-50: #e6f0f8;
+  --color-medblue-100: #cce1f1;
+  --color-medblue-200: #99c3e3;
+  --color-medblue-300: #66a5d5;
+  --color-medblue-400: #3387c7;
+  --color-medblue-500: #0077b6;
+  --color-medblue-600: #005f92;
+  --color-medblue-700: #00476d;
+  --color-medblue-800: #003049;
+  --color-medblue-900: #023e8a;
+
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+.animate-node-pulse {
+  animation: node-pulse 3s ease-in-out infinite;
+}

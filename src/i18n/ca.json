@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "MedNode — Programari sanitari per a gestió hospitalària",
+    "description": "MedNode digitalitza consentiments informats, trasllats de pacients i fluxos de treball hospitalaris. Integrat amb el teu HIS."
+  },
+  "nav": {
+    "products": "Productes",
+    "advantages": "Avantatges",
+    "contact": "Contacte"
+  },
+  "hero": {
+    "badge": "Programari sanitari per a gestió hospitalària",
+    "title": "La plataforma que connecta els processos clínics del teu hospital",
+    "subtitle": "MedNode digitalitza consentiments informats, trasllats de pacients i fluxos de treball hospitalaris. Integrat amb el teu HIS.",
+    "cta": "Contacta'ns"
+  },
+  "products": {
+    "title": "Productes",
+    "medsign": {
+      "name": "MedSign",
+      "tagline": "Consentiment informat digital",
+      "description": "Signatura electrònica integrada amb el HIS. Eliminació del paper en el procés de consentiment del pacient. Traçabilitat completa i arxiu digital automàtic.",
+      "features": [
+        "Signatura electrònica del pacient en tauleta",
+        "Integració amb SAP IS-H i altres HIS",
+        "Arxiu automàtic al repositori documental",
+        "Plantilles personalitzables per servei"
+      ]
+    },
+    "medflow": {
+      "name": "MedFlow",
+      "tagline": "Gestió de trasllats i fluxos de pacients",
+      "description": "Coordinació en temps real entre serveis. Traçabilitat completa del recorregut del pacient dins l'hospital.",
+      "features": [
+        "Sol·licitud i acceptació de trasllats digital",
+        "Seguiment en temps real del pacient",
+        "Notificacions automàtiques entre serveis",
+        "Integració amb el sistema de llits"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Per què MedNode?",
+    "items": [
+      {
+        "title": "Integració amb el teu HIS",
+        "description": "Connector natiu amb SAP IS-H, HP-HIS i altres sistemes d'informació hospitalària. Sense duplicar dades."
+      },
+      {
+        "title": "Les dades no surten de l'hospital",
+        "description": "Desplegament on-premise sobre la infraestructura del centre. Compliment total de RGPD i normativa sanitària."
+      },
+      {
+        "title": "Compliment normatiu",
+        "description": "Signatura electrònica conforme a eIDAS. Consentiments vàlids legalment. Traçabilitat auditable."
+      },
+      {
+        "title": "Suport personalitzat",
+        "description": "Manteniment i suport directe, sense intermediaris. Adaptació a les necessitats específiques del teu centre."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vols saber com MedNode pot ajudar el teu hospital?",
+    "subtitle": "Explica'ns les teves necessitats i t'assessorem sense compromís.",
+    "cta": "Escriu-nos",
+    "email": "info@mednode.es"
+  },
+  "footer": {
+    "tagline": "Programari sanitari per a gestió hospitalària",
+    "copyright": "© 2026 MedNode. Tots els drets reservats.",
+    "marks": "MedSign® i MedFlow® són marques registrades."
+  }
+}

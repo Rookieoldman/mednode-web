@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: string;
+}
+
+const { title, description, lang } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0077B6" />
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+
+    <link rel="alternate" hreflang="ca" href="https://mednode.es/ca/" />
+    <link rel="alternate" hreflang="es" href="https://mednode.es/es/" />
+    <link rel="alternate" hreflang="eu" href="https://mednode.es/eu/" />
+    <link rel="alternate" hreflang="gl" href="https://mednode.es/gl/" />
+    <link rel="alternate" hreflang="x-default" href="https://mednode.es/es/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MedNode" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://mednode.es/img/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://mednode.es/img/og-image.svg" />
+  </head>
+  <body class="bg-white font-body text-gray-800 antialiased">
+    <slot />
+  </body>
+</html>

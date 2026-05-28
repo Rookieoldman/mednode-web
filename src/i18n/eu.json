@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "MedNode — Ospitale-kudeaketarako osasun-softwarea",
+    "description": "MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua."
+  },
+  "nav": {
+    "products": "Produktuak",
+    "advantages": "Abantailak",
+    "contact": "Kontaktua"
+  },
+  "hero": {
+    "badge": "Osasun-softwarea ospitale-kudeaketarako",
+    "title": "Zure ospitaleko prozesu klinikoak konektatzen dituen plataforma",
+    "subtitle": "MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua.",
+    "cta": "Jarri gurekin harremanetan"
+  },
+  "products": {
+    "title": "Produktuak",
+    "medsign": {
+      "name": "MedSign",
+      "tagline": "Baimen informatu digitala",
+      "description": "HIS-arekin integratutako sinadura elektronikoa. Pazientearen baimen-prozesuan papera kentzea. Trazabilitate osoa eta artxibo digital automatikoa.",
+      "features": [
+        "Pazientearen sinadura elektronikoa tabletan",
+        "SAP IS-H eta beste HIS batzuekin integrazioa",
+        "Artxibo automatikoa dokumentu-biltegian",
+        "Zerbitzuaren arabera pertsonalizagarriak diren txantiloiak"
+      ]
+    },
+    "medflow": {
+      "name": "MedFlow",
+      "tagline": "Pazienteen trasladoen eta fluxuen kudeaketa",
+      "description": "Zerbitzuen arteko denbora errealeko koordinazioa. Pazientearen ospitale barruko ibilbidearen trazabilitate osoa.",
+      "features": [
+        "Trasladoen eskaera eta onarpena digitala",
+        "Pazientearen denbora errealeko jarraipena",
+        "Zerbitzuen arteko jakinarazpen automatikoak",
+        "Ohe-sistemarekin integrazioa"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Zergatik MedNode?",
+    "items": [
+      {
+        "title": "Zure HIS-arekin integrazioa",
+        "description": "SAP IS-H, HP-HIS eta beste ospitale-informazio sistemekin konektore natiboa. Daturik bikoiztu gabe."
+      },
+      {
+        "title": "Datuak ez dira ospitaletik ateratzen",
+        "description": "Zentroaren azpiegituran on-premise inplementazioa. RGPD eta osasun-araudiaren betetze osoa."
+      },
+      {
+        "title": "Arau-betetze",
+        "description": "eIDAS-en araberako sinadura elektronikoa. Legalki baliozkoak diren baimenak. Trazabilitate auditagarria."
+      },
+      {
+        "title": "Laguntza pertsonalizatua",
+        "description": "Mantentze-lana eta laguntza zuzena, bitartekorik gabe. Zure zentroaren behar espezifikoetara egokitzea."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Jakin nahi duzu MedNode-k nola lagundu diezaiokeen zure ospitaleari?",
+    "subtitle": "Kontatu zure beharrak eta konpromisorik gabe aholkatuko zaitugu.",
+    "cta": "Idatzi iezaguzu",
+    "email": "info@mednode.es"
+  },
+  "footer": {
+    "tagline": "Osasun-softwarea ospitale-kudeaketarako",
+    "copyright": "© 2026 MedNode. Eskubide guztiak erreserbatuta.",
+    "marks": "MedSign® eta MedFlow® erregistratutako markak dira."
+  }
+}

@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import Products from '../../components/Products.astro';
+import Advantages from '../../components/Advantages.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import t from '../../i18n/es.json';
+
+const lang = 'es';
+---
+<Layout title={t.meta.title} description={t.meta.description} lang={lang}>
+  <Navbar t={t.nav} lang={lang} />
+  <main>
+    <Hero t={t.hero} />
+    <Products t={t.products} />
+    <Advantages t={t.advantages} />
+    <Contact t={t.contact} />
+  </main>
+  <Footer t={t.footer} lang={lang} />
+</Layout>

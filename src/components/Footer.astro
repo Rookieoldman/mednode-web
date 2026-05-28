@@ -1,0 +1,19 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import type { Lang } from '../i18n/languages';
+
+interface Props {
+  t: { tagline: string; copyright: string; marks: string };
+  lang: Lang;
+}
+
+const { t, lang } = Astro.props;
+---
+<footer class="bg-medblue-900 py-10 text-medblue-200">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center text-sm sm:px-6">
+    <LanguageSwitcher lang={lang} variant="footer" />
+    <p class="opacity-90">{t.tagline}</p>
+    <p class="opacity-75">{t.copyright}</p>
+    <p class="max-w-lg text-xs opacity-70">{t.marks}</p>
+  </div>
+</footer>

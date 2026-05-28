@@ -1,0 +1,45 @@
+---
+interface Props {
+  t: { badge: string; title: string; subtitle: string; cta: string };
+}
+
+const { t } = Astro.props;
+const mailto = 'mailto:info@mednode.es?subject=Consulta%20desde%20la%20web%20MedNode';
+---
+<section id="hero" class="bg-gradient-to-b from-white to-mednode-50 py-16 md:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+    <div>
+      <p class="mb-4 inline-block rounded-full bg-medblue-50 px-4 py-1.5 text-sm font-semibold text-medblue-700">
+        {t.badge}
+      </p>
+      <h1 class="font-heading text-4xl font-bold leading-tight text-medblue-900 md:text-5xl lg:text-6xl">
+        {t.title}
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+        {t.subtitle}
+      </p>
+      <a
+        href={mailto}
+        class="mt-8 inline-block rounded-lg bg-medblue-500 px-8 py-3.5 font-heading font-semibold text-white shadow-md transition hover:bg-medblue-600 hover:-translate-y-0.5"
+      >
+        {t.cta}
+      </a>
+    </div>
+
+    <div class="flex justify-center lg:justify-end" aria-hidden="true">
+      <svg class="w-full max-w-md" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <line x1="100" y1="45" x2="55" y2="130" stroke="#0077B6" stroke-width="2" opacity="0.35" />
+        <line x1="100" y1="45" x2="145" y2="130" stroke="#0077B6" stroke-width="2" opacity="0.35" />
+        <line x1="55" y1="130" x2="145" y2="130" stroke="#2A9D8F" stroke-width="2" opacity="0.35" />
+        <line x1="100" y1="45" x2="100" y2="100" stroke="#023E8A" stroke-width="2" opacity="0.25" />
+        <line x1="100" y1="100" x2="55" y2="130" stroke="#023E8A" stroke-width="2" opacity="0.25" />
+        <line x1="100" y1="100" x2="145" y2="130" stroke="#023E8A" stroke-width="2" opacity="0.25" />
+        <circle class="animate-node-pulse" cx="100" cy="40" r="14" fill="#0077B6" />
+        <circle cx="100" cy="100" r="11" fill="#2A9D8F" />
+        <circle cx="50" cy="135" r="12" fill="#0077B6" />
+        <circle cx="150" cy="135" r="12" fill="#2A9D8F" />
+        <circle cx="100" cy="165" r="9" fill="#023E8A" opacity="0.6" />
+      </svg>
+    </div>
+  </div>
+</section>
