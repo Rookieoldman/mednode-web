@@ -1,6 +1,7 @@
 export interface Translations {
   meta: { title: string; description: string };
   nav: { products: string; advantages: string; contact: string };
+  theme: { switchToDark: string; switchToLight: string };
   hero: { badge: string; title: string; subtitle: string; cta: string };
   products: {
     title: string;

@@ -8,6 +8,10 @@
     "advantages": "Avantatges",
     "contact": "Contacte"
   },
+  "theme": {
+    "switchToDark": "Activar mode fosc",
+    "switchToLight": "Activar mode clar"
+  },
   "hero": {
     "badge": "Programari sanitari per a gestió hospitalària",
     "title": "La plataforma que connecta els processos clínics del teu hospital",

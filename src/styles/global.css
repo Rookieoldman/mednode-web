@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./contact-modal.css";
 @import "./theme-hospital.css";
+@import "./themes.css";
 
 @theme {
   --color-clinical-50: #f0f7fc;

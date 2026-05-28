@@ -8,28 +8,25 @@ interface Props {
 
 const { t } = Astro.props;
 ---
-<section id="advantages" class="relative overflow-hidden bg-white py-20 md:py-28">
-  <div
-    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-clinical-50/80 to-transparent"
-    aria-hidden="true"
-  ></div>
+<section id="advantages" class="site-advantages relative overflow-hidden py-20 md:py-28">
+  <div class="site-advantages-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
   <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="font-heading text-3xl font-bold text-clinical-900 md:text-4xl">{t.title}</h2>
+      <h2 class="font-heading text-3xl font-bold md:text-4xl">{t.title}</h2>
     </div>
 
     <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {
         t.items.map((item, i) => (
-          <article class="hospital-card rounded-xl border border-clinical-100 bg-clinical-50/50 p-6">
+          <article class="site-advantage-card hospital-card rounded-xl border p-6">
             <div
               class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-medblue-600 to-teal-hospital font-heading text-lg font-bold text-white shadow-md"
               aria-hidden="true"
             >
               {i + 1}
             </div>
-            <h3 class="font-heading text-lg font-semibold text-clinical-900">{item.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+            <h3 class="font-heading text-lg font-semibold">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">{item.description}</p>
           </article>
         ))
       }

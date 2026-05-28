@@ -6,16 +6,14 @@ import Products from '../../components/Products.astro';
 import Advantages from '../../components/Advantages.astro';
 import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
-import TrustBar from '../../components/TrustBar.astro';
 import t from '../../i18n/ca.json';
 
 const lang = 'ca';
 ---
 <Layout title={t.meta.title} description={t.meta.description} lang={lang}>
-  <Navbar t={t.nav} lang={lang} />
+  <Navbar t={t.nav} theme={t.theme} lang={lang} />
   <main>
     <Hero t={t.hero} exploreLabel={t.nav.products} />
-    <TrustBar lang={lang} />
     <Products t={t.products} />
     <Advantages t={t.advantages} />
     <Contact t={t.contact} />

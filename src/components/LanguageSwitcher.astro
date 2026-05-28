@@ -3,49 +3,21 @@ import { langCodes, languages, type Lang } from '../i18n/languages';
 
 interface Props {
   lang: Lang;
-  variant?: 'header' | 'footer' | 'dark';
 }
 
-const { lang, variant = 'header' } = Astro.props;
-const isFooter = variant === 'footer';
-const isDark = variant === 'dark' || isFooter;
+const { lang } = Astro.props;
 ---
-<nav
-  class:list={[
-    'flex items-center gap-1 text-sm font-semibold',
-    isDark ? 'text-clinical-100' : 'text-gray-600',
-  ]}
-  aria-label="Idioma"
->
+<nav class="site-lang flex items-center gap-1 text-sm font-semibold" aria-label="Idioma">
   {
     langCodes.map((code, i) => (
       <>
-        {i > 0 && (
-          <span class={isDark ? 'text-white/25' : 'text-gray-300'} aria-hidden="true">
-            |
-          </span>
-        )}
+        {i > 0 && <span class="site-lang-sep" aria-hidden="true">|</span>}
         {code === lang ? (
-          <span
-            class:list={[
-              'rounded px-2 py-1',
-              isDark ? 'bg-white/15 text-white' : 'bg-medblue-50 text-medblue-500',
-            ]}
-            aria-current="page"
-          >
+          <span class="site-lang-current rounded px-2 py-1" aria-current="page">
             {languages[code].flag}
           </span>
         ) : (
-          <a
-            href={`/${code}/`}
-            hreflang={code}
-            class:list={[
-              'rounded px-2 py-1 transition-colors',
-              isDark
-                ? 'text-clinical-100/80 hover:bg-white/10 hover:text-white'
-                : 'text-gray-600 hover:bg-medblue-50 hover:text-medblue-500',
-            ]}
-          >
+          <a href={`/${code}/`} hreflang={code} class="rounded px-2 py-1 transition-colors">
             {languages[code].flag}
           </a>
         )}

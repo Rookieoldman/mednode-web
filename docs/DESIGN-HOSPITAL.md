@@ -20,7 +20,6 @@ Abre `http://localhost:4321/es/` (o `/ca/`, `/eu/`, `/gl/`).
 | **Tipografía** | DM Sans (titulares) + Source Sans 3 |
 | **Hero** | Fondo oscuro con rejilla, animación de entrada, red de nodos en marco glass |
 | **Navbar** | Barra oscura semitransparente (sticky) |
-| **TrustBar** | Franja RGPD · eIDAS · On-premise · HIS |
 | **Productos** | Tarjetas numeradas con barra lateral de color |
 | **Ventajas** | Grid claro con badges numerados |
 | **Contacto** | Bloque CTA en panel oscuro |

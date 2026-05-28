@@ -20,30 +20,30 @@ const products = [
   { key: 'medflow', data: t.medflow, accent: 'from-medblue-500 to-clinical-800' },
 ] as const;
 ---
-<section id="products" class="bg-clinical-50 py-20 md:py-28">
+<section id="products" class="site-products py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center animate-hospital-in">
-      <h2 class="font-heading text-3xl font-bold text-clinical-900 md:text-4xl">{t.title}</h2>
+      <h2 class="font-heading text-3xl font-bold md:text-4xl">{t.title}</h2>
     </div>
 
     <div class="mt-14 grid gap-8 lg:grid-cols-2">
       {
         products.map(({ data, accent }, index) => (
-          <article class="hospital-card group relative flex overflow-hidden rounded-2xl border border-clinical-200 bg-white shadow-sm">
+          <article class="site-product-card hospital-card group relative flex overflow-hidden rounded-2xl border shadow-sm">
             <div class={`hospital-accent-bar w-1.5 shrink-0 bg-gradient-to-b ${accent}`} aria-hidden="true" />
             <div class="flex flex-1 flex-col p-8 md:p-10">
-              <span class="font-heading text-5xl font-bold text-clinical-100 transition-colors group-hover:text-clinical-200">
+              <span class="site-product-num font-heading text-5xl font-bold transition-colors">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 class="mt-4 font-heading text-2xl font-bold text-clinical-900">
+              <h3 class="mt-4 font-heading text-2xl font-bold">
                 {data.name}
                 <sup class="text-xs font-bold text-teal-hospital">®</sup>
               </h3>
               <p class="mt-1 font-semibold text-teal-hospital-dark">{data.tagline}</p>
-              <p class="mt-4 leading-relaxed text-slate-600">{data.description}</p>
-              <ul class="mt-8 flex-1 space-y-3 border-t border-clinical-100 pt-6">
+              <p class="site-product-desc mt-4 leading-relaxed">{data.description}</p>
+              <ul class="site-product-features mt-8 flex-1 space-y-3 border-t pt-6">
                 {data.features.map((f) => (
-                  <li class="flex gap-3 text-sm text-slate-700">
+                  <li class="flex gap-3 text-sm">
                     <span
                       class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-hospital/10 text-teal-hospital-dark"
                       aria-hidden="true"

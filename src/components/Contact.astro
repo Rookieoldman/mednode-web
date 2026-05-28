@@ -11,29 +11,24 @@ interface Props {
 
 const { t } = Astro.props;
 ---
-<section id="contact" class="bg-clinical-950 py-20 md:py-28">
+<section id="contact" class="site-contact py-20 md:py-28">
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
-    <div
-      class="rounded-2xl border border-white/10 bg-gradient-to-b from-clinical-900 to-clinical-950 p-10 shadow-2xl md:p-14"
-    >
-      <h2 class="font-heading text-3xl font-bold text-white md:text-4xl">{t.title}</h2>
-      <p class="mt-4 text-lg leading-relaxed text-clinical-100/85">{t.subtitle}</p>
+    <div class="site-contact-panel rounded-2xl border p-10 md:p-14">
+      <h2 class="font-heading text-3xl font-bold md:text-4xl">{t.title}</h2>
+      <p class="contact-sub mt-4 text-lg leading-relaxed">{t.subtitle}</p>
       <p class="mt-6">
-        <a
-          href={`mailto:${t.email}`}
-          class="text-lg font-semibold text-teal-hospital transition hover:text-white"
-        >
+        <a href={`mailto:${t.email}`} class="contact-email text-lg font-semibold transition">
           {t.email}
         </a>
       </p>
       <button
         type="button"
         data-open-contact
-        class="btn-hospital-primary mt-10 cursor-pointer rounded-lg px-12 py-4 font-heading text-lg font-semibold text-white"
+        class="site-btn-primary mt-10 cursor-pointer rounded-lg px-12 py-4 font-heading text-lg font-semibold"
       >
         {t.cta}
       </button>
-      <p class="mt-6 text-sm text-clinical-100/60" set:html={t.hint} />
+      <p class="contact-hint mt-6 text-sm" set:html={t.hint} />
     </div>
   </div>
 </section>

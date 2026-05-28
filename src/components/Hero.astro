@@ -8,11 +8,7 @@ interface Props {
 
 const { t, exploreLabel } = Astro.props;
 ---
-<section
-  id="hero"
-  class="hero-hospital relative overflow-hidden bg-gradient-to-br from-clinical-950 via-clinical-900 to-medblue-900 text-white"
->
-  <!-- Fondo: cuadrícula + icono red de nodos -->
+<section id="hero" class="hero-hospital site-hero relative overflow-hidden">
   <div class="hero-hospital__bg pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="hospital-grid-bg absolute inset-0 opacity-70"></div>
     <div class="hero-hospital__network">
@@ -20,14 +16,13 @@ const { t, exploreLabel } = Astro.props;
     </div>
     <div class="hero-hospital__glow hero-hospital__glow--teal"></div>
     <div class="hero-hospital__glow hero-hospital__glow--blue"></div>
-    <!-- Degradado para legibilidad del texto -->
     <div class="hero-hospital__scrim"></div>
   </div>
 
   <div class="relative z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:py-32">
     <div class="animate-hospital-in max-w-2xl">
       <p
-        class="mb-5 inline-flex items-center gap-2 rounded-md border border-teal-hospital/40 bg-teal-hospital/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-teal-hospital"
+        class="hero-badge mb-5 inline-flex items-center gap-2 rounded-md border px-4 py-1.5 text-sm font-semibold tracking-wide"
       >
         <span class="h-2 w-2 animate-pulse rounded-full bg-teal-hospital" aria-hidden="true"></span>
         {t.badge}
@@ -35,21 +30,18 @@ const { t, exploreLabel } = Astro.props;
       <h1 class="font-heading text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.25rem]">
         {t.title}
       </h1>
-      <p class="mt-6 text-lg leading-relaxed text-clinical-100/90">
+      <p class="hero-subtitle mt-6 text-lg leading-relaxed">
         {t.subtitle}
       </p>
       <div class="mt-10 flex flex-wrap items-center gap-4">
         <button
           type="button"
           data-open-contact
-          class="btn-hospital-primary cursor-pointer rounded-lg px-8 py-3.5 font-heading text-base font-semibold text-white"
+          class="site-btn-primary cursor-pointer rounded-lg px-8 py-3.5 font-heading text-base font-semibold"
         >
           {t.cta}
         </button>
-        <a
-          href="#products"
-          class="rounded-lg border border-white/25 px-6 py-3.5 font-heading text-sm font-semibold text-white transition hover:border-white/50 hover:bg-white/5"
-        >
+        <a href="#products" class="hero-explore rounded-lg border px-6 py-3.5 font-heading text-sm font-semibold transition">
           {exploreLabel}
         </a>
       </div>
@@ -82,7 +74,6 @@ const { t, exploreLabel } = Astro.props;
     height: auto;
   }
 
-  /* Enlaces y nodos más visibles sobre el fondo oscuro */
   .hero-hospital__network :global(.network-link) {
     opacity: 0.55;
     stroke: #5eb8e8;
