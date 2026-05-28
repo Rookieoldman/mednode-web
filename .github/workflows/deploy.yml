@@ -1,8 +1,12 @@
+# Despliegue a GitHub Pages: npm ci → npm run build → publicar dist/
+# Requisito en el repo: Settings → Pages → Source = "GitHub Actions"
+
 name: Deploy MedNode to GitHub Pages
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,19 +24,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js 22 (Astro 6 requiere >=22.12.0)
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
-      - name: Install dependencies
+      - name: Instalar dependencias
         run: npm ci
 
-      - name: Build Astro
+      - name: Build Astro (genera dist/)
         run: npm run build
 
-      - name: Upload artifact
+      - name: Comprobar artefacto de build
+        run: |
+          test -f dist/index.html
+          test -f dist/es/index.html
+          test -f dist/ca/index.html
+          test -f dist/CNAME
+          echo "Build OK: $(find dist -name 'index.html' | wc -l) páginas"
+
+      - name: Subir artefacto para Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -44,6 +56,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Publicar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
