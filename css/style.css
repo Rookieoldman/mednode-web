@@ -1,0 +1,483 @@
+/* MedNode — corporate landing (static) */
+
+:root {
+  --blue-primary: #0077b6;
+  --blue-dark: #023e8a;
+  --green-primary: #2a9d8f;
+  --green-light: #40bfa3;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --bg-section: #eef2f6;
+  --text: #1a1a2e;
+  --text-muted: #4a5568;
+  --white: #ffffff;
+  --shadow: 0 4px 24px rgba(2, 62, 138, 0.08);
+  --radius: 12px;
+  --max-width: 1120px;
+  --header-h: 72px;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--blue-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--blue-dark);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(2, 62, 138, 0.08);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--blue-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.logo-link:focus-visible {
+  outline: 2px solid var(--blue-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.lang-switcher a,
+.lang-switcher span {
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.lang-switcher a:hover,
+.lang-switcher a:focus-visible {
+  color: var(--blue-primary);
+  background: var(--bg-alt);
+}
+
+.lang-switcher a[aria-current="page"],
+.lang-switcher span[aria-current="page"] {
+  color: var(--blue-dark);
+  background: rgba(0, 119, 182, 0.1);
+}
+
+.lang-sep {
+  color: #cbd5e0;
+  user-select: none;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(160deg, var(--bg-alt) 0%, #e8f4f8 50%, var(--bg) 100%);
+  padding: 3rem 1.25rem 4rem;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 4.5rem 1.25rem 5rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--blue-dark);
+  margin: 0 0 1rem;
+}
+
+.hero-lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0 0 1.75rem;
+  max-width: 36ch;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--green-primary);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--green-light);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--blue-dark);
+  outline-offset: 3px;
+}
+
+/* Hero visual — connected nodes */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nodes-graph {
+  width: min(100%, 380px);
+  aspect-ratio: 1;
+}
+
+.nodes-graph circle {
+  fill: var(--blue-primary);
+}
+
+.nodes-graph circle.accent {
+  fill: var(--green-primary);
+}
+
+.nodes-graph line {
+  stroke: var(--blue-dark);
+  stroke-width: 2;
+  opacity: 0.35;
+}
+
+.nodes-graph .pulse {
+  animation: node-pulse 4s ease-in-out infinite;
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1.25rem;
+}
+
+.section-alt {
+  background: var(--bg-section);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--blue-dark);
+  margin: 0 0 2rem;
+  text-align: center;
+}
+
+/* Product cards */
+.products-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(2, 62, 138, 0.06);
+  transition: box-shadow 0.25s ease;
+}
+
+.section-alt .product-card {
+  background: var(--white);
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(2, 62, 138, 0.12);
+}
+
+.product-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--blue-primary);
+  margin: 0 0 0.75rem;
+}
+
+.product-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-icons svg {
+  width: 36px;
+  height: 36px;
+  color: var(--green-primary);
+}
+
+.product-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Advantages */
+.advantages-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .advantages-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.advantage-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.advantage-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: var(--blue-primary);
+}
+
+.advantage-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--blue-dark);
+  margin: 0 0 0.5rem;
+}
+
+.advantage-item p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+/* Contact */
+.contact-section {
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+}
+
+.contact-section p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 40ch;
+  margin: 0 auto 1rem;
+}
+
+.contact-email {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--blue-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.9375rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.site-footer a {
+  color: var(--green-light);
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.site-footer .lang-switcher a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer .lang-switcher a:hover,
+.site-footer .lang-switcher a:focus-visible {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.site-footer .lang-switcher a[aria-current="page"] {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.site-footer .lang-sep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-tagline {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.75;
+}
+
+/* Scroll reveal (subtle) */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .nodes-graph .pulse {
+    animation: none;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+}

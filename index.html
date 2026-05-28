@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedNode — Software sanitari hospitalari</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://mednode.cat/">
+  <script>
+    (function () {
+      var host = (location.hostname || "").toLowerCase();
+      var path = "/es/";
+      if (host === "mednode.cat" || host.slice(-11) === ".mednode.cat") {
+        path = "/ca/";
+      } else if (host === "mednode.es" || host.slice(-11) === ".mednode.es") {
+        path = "/es/";
+      }
+      var dest = path + (location.search || "") + (location.hash || "");
+      location.replace(dest);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/es/">
+  </noscript>
+</head>
+<body>
+  <p><a href="/es/">MedNode</a></p>
+</body>
+</html>
