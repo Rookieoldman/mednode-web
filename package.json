@@ -10,11 +10,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "ci": "npm run build",
+    "favicons": "node scripts/generate-favicons.mjs",
     "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.8",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "to-ico": "^1.1.5"
   }
 }
