@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import Logo from './Logo.astro';
 import type { Lang } from '../i18n/languages';
 
 interface Props {
@@ -9,11 +10,16 @@ interface Props {
 
 const { t, lang } = Astro.props;
 ---
-<footer class="bg-medblue-900 py-10 text-medblue-200">
-  <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center text-sm sm:px-6">
-    <LanguageSwitcher lang={lang} variant="footer" />
-    <p class="opacity-90">{t.tagline}</p>
-    <p class="opacity-75">{t.copyright}</p>
-    <p class="max-w-lg text-xs opacity-70">{t.marks}</p>
+<footer class="site-footer border-t py-12">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex w-full items-center justify-between gap-4">
+      <Logo class="opacity-95" />
+      <LanguageSwitcher lang={lang} />
+    </div>
+    <div class="mt-10 space-y-2 text-center text-sm">
+      <p class="footer-tagline font-medium">{t.tagline}</p>
+      <p class="footer-copy">{t.copyright}</p>
+      <p class="footer-marks mx-auto max-w-xl text-xs">{t.marks}</p>
+    </div>
   </div>
 </footer>

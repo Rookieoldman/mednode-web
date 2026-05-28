@@ -1,7 +1,18 @@
 @import "tailwindcss";
 @import "./contact-modal.css";
+@import "./theme-hospital.css";
+@import "./themes.css";
 
 @theme {
+  --color-clinical-50: #f0f7fc;
+  --color-clinical-100: #dceaf5;
+  --color-clinical-200: #b8d4eb;
+  --color-clinical-800: #1e3a5f;
+  --color-clinical-900: #0f2847;
+  --color-clinical-950: #081c33;
+
+  --color-teal-hospital: #0d9488;
+  --color-teal-hospital-dark: #0f766e;
   --color-mednode-50: #e6f4f1;
   --color-mednode-100: #cce9e3;
   --color-mednode-200: #99d3c7;
@@ -24,8 +35,12 @@
   --color-medblue-800: #003049;
   --color-medblue-900: #023e8a;
 
-  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-heading: "DM Sans", "Plus Jakarta Sans", sans-serif;
   --font-body: "Source Sans 3", sans-serif;
+}
+
+.theme-hospital {
+  --font-heading: "DM Sans", sans-serif;
 }
 
 @layer base {

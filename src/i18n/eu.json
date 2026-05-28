@@ -8,6 +8,10 @@
     "advantages": "Abantailak",
     "contact": "Kontaktua"
   },
+  "theme": {
+    "switchToDark": "Modu iluna aktibatu",
+    "switchToLight": "Modu argia aktibatu"
+  },
   "hero": {
     "badge": "Osasun-softwarea ospitale-kudeaketarako",
     "title": "Zure ospitaleko prozesu klinikoak konektatzen dituen plataforma",

@@ -7,27 +7,29 @@ interface Props {
 }
 
 const { t } = Astro.props;
-const icons = [
-  'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
-  'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
-  'M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-  'M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z',
-];
 ---
-<section id="advantages" class="bg-medblue-900 py-16 md:py-20">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <h2 class="text-center font-heading text-3xl font-bold text-white md:text-4xl">{t.title}</h2>
+<section id="advantages" class="site-advantages relative overflow-hidden py-20 md:py-28">
+  <div class="site-advantages-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-heading text-3xl font-bold md:text-4xl">{t.title}</h2>
+    </div>
 
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {t.items.map((item, i) => (
-        <article class="rounded-xl bg-white/10 p-6">
-          <svg class="mb-4 h-10 w-10 text-mednode-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d={icons[i % icons.length]} />
-          </svg>
-          <h3 class="font-heading text-lg font-semibold text-white">{item.title}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-medblue-100">{item.description}</p>
-        </article>
-      ))}
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        t.items.map((item, i) => (
+          <article class="site-advantage-card hospital-card rounded-xl border p-6">
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-medblue-600 to-teal-hospital font-heading text-lg font-bold text-white shadow-md"
+              aria-hidden="true"
+            >
+              {i + 1}
+            </div>
+            <h3 class="font-heading text-lg font-semibold">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">{item.description}</p>
+          </article>
+        ))
+      }
     </div>
   </div>
 </section>

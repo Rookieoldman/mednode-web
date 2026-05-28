@@ -8,6 +8,10 @@
     "advantages": "Ventajas",
     "contact": "Contacto"
   },
+  "theme": {
+    "switchToDark": "Activar modo oscuro",
+    "switchToLight": "Activar modo claro"
+  },
   "hero": {
     "badge": "Software sanitario para gestión hospitalaria",
     "title": "La plataforma que conecta los procesos clínicos de tu hospital",

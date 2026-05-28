@@ -19,13 +19,26 @@ const contactModal = contactModalByLang[lang].contactModal;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-theme="dark">
   <head>
+    <script is:inline>
+      (function () {
+        var k = 'mednode-theme';
+        var t;
+        try {
+          t = localStorage.getItem(k);
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0077B6" />
+    <meta name="theme-color" content="#0f2847" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -41,7 +54,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
 
@@ -56,9 +69,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://mednode.es/img/og-image.svg" />
   </head>
-  <body class="bg-white font-body text-gray-800 antialiased">
+  <body class="theme-hospital font-body antialiased">
     <slot />
     <ContactModal m={contactModal} />
+    <script src="/js/theme.js" defer></script>
     <script src="/js/contact-modal.js?v=3" defer></script>
   </body>
 </html>

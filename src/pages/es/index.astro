@@ -11,9 +11,9 @@ import t from '../../i18n/es.json';
 const lang = 'es';
 ---
 <Layout title={t.meta.title} description={t.meta.description} lang={lang}>
-  <Navbar t={t.nav} lang={lang} />
+  <Navbar t={t.nav} theme={t.theme} lang={lang} />
   <main>
-    <Hero t={t.hero} />
+    <Hero t={t.hero} exploreLabel={t.nav.products} />
     <Products t={t.products} />
     <Advantages t={t.advantages} />
     <Contact t={t.contact} />
