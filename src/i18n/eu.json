@@ -60,6 +60,32 @@
       }
     ]
   },
+  "contactModal": {
+    "title": "Idatzi gaitzazu",
+    "intro": "Kontatu zure kasua eta 1–2 lanegunetan erantzungo dizugu.",
+    "name": "Izena",
+    "namePh": "Zure izena",
+    "email": "Posta",
+    "emailPh": "zu@posta.com",
+    "org": "Ospitalea edo erakundea (aukerakoa)",
+    "orgPh": "Zentroaren izena",
+    "message": "Mezua",
+    "messagePh": "Nola lagun zaitzakete?",
+    "send": "Mezua bidali",
+    "gmail": "Gmail-en ireki",
+    "close": "Itxi",
+    "sending": "Bidaltzen…",
+    "success": "Mezua bidali da. Laster erantzungo dizugu.",
+    "error": "Ezin izan da automatikoki bidali. Erabili «Gmail-en ireki» edo idatzi info@mednode.es helbidera.",
+    "subject": "[MedNode] Kontsulta web",
+    "autoresponse": "Kaixo,\n\nEskerrik asko MedNode-rekin harremanetan jartzeagatik. Zure mezua ongi jaso dugu.\n\n1–2 lanegunetan erantzungo dizugu adierazi duzun helbide elektronikora.\n\n—\nMezu automatikoa (ez erantzun helbide honetara).\nKontsultak: info@mednode.es\nhttps://mednode.es\n\nMedNode taldea",
+    "privacyPrefix": "Irakurri eta onartzen dut ",
+    "privacyLink": "pribatutasun-politika",
+    "privacyHref": "/eu/pribatutasuna/",
+    "required": "Bete nahitaezko eremuak.",
+    "invalidEmail": "Sartu baliozko helbide elektroniko bat.",
+    "privacyRequired": "Mezua bidaltzeko pribatutasun-politika onartu behar duzu."
+  },
   "contact": {
     "title": "Jakin nahi duzu MedNode-k nola lagundu diezaiokeen zure ospitaleari?",
     "subtitle": "Kontatu zure beharrak eta konpromisorik gabe aholkatuko zaitugu.",

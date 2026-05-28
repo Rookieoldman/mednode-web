@@ -29,8 +29,9 @@
   position: relative;
   z-index: 1;
   width: min(100%, 32rem);
-  max-height: min(90vh, 720px);
+  max-height: min(92vh, 800px);
   overflow-y: auto;
+  padding-bottom: 0.25rem;
   background: #fff;
   border-radius: 12px;
   padding: 1.75rem 1.5rem 1.5rem;
@@ -128,12 +129,19 @@
 }
 
 .contact-form__consent input[type="checkbox"] {
-  width: 1.125rem;
-  height: 1.125rem;
-  margin-top: 0.2rem;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  margin-top: 0.15rem;
   flex-shrink: 0;
   accent-color: #0077b6;
   cursor: pointer;
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  display: inline-block;
+  opacity: 1;
+  position: static;
 }
 
 .contact-form__consent label {

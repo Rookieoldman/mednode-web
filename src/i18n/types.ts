@@ -28,6 +28,32 @@ export interface Translations {
     email: string;
     hint: string;
   };
+  contactModal: {
+    title: string;
+    intro: string;
+    name: string;
+    namePh: string;
+    email: string;
+    emailPh: string;
+    org: string;
+    orgPh: string;
+    message: string;
+    messagePh: string;
+    send: string;
+    gmail: string;
+    close: string;
+    sending: string;
+    success: string;
+    error: string;
+    subject: string;
+    autoresponse: string;
+    privacyPrefix: string;
+    privacyLink: string;
+    privacyHref: string;
+    required: string;
+    invalidEmail: string;
+    privacyRequired: string;
+  };
   footer: {
     tagline: string;
     copyright: string;

@@ -1,13 +1,21 @@
 ---
 import '../styles/global.css';
+import ContactModal from '../components/ContactModal.astro';
+import es from '../i18n/es.json';
+import ca from '../i18n/ca.json';
+import eu from '../i18n/eu.json';
+import gl from '../i18n/gl.json';
+import type { Lang } from '../i18n/languages';
 
 interface Props {
   title: string;
   description: string;
-  lang: string;
+  lang: Lang;
 }
 
 const { title, description, lang } = Astro.props;
+const contactModalByLang = { es, ca, eu, gl } as const;
+const contactModal = contactModalByLang[lang].contactModal;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -50,6 +58,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="bg-white font-body text-gray-800 antialiased">
     <slot />
-    <script src="/js/contact-modal.js" defer></script>
+    <ContactModal m={contactModal} />
+    <script src="/js/contact-modal.js?v=3" defer></script>
   </body>
 </html>

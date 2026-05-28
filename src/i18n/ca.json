@@ -60,6 +60,32 @@
       }
     ]
   },
+  "contactModal": {
+    "title": "Escriu-nos",
+    "intro": "Explica'ns el teu cas i et respondrem en 1–2 dies laborables.",
+    "name": "Nom",
+    "namePh": "El teu nom",
+    "email": "Correu",
+    "emailPh": "tu@correu.cat",
+    "org": "Hospital o organització (opcional)",
+    "orgPh": "Nom del centre",
+    "message": "Missatge",
+    "messagePh": "En què et podem ajudar?",
+    "send": "Enviar missatge",
+    "gmail": "Obrir a Gmail",
+    "close": "Tancar",
+    "sending": "Enviant…",
+    "success": "Missatge enviat. Et respondrem aviat a l'adreça indicada.",
+    "error": "No s'ha pogut enviar automàticament. Fes servir «Obrir a Gmail» o escriu a info@mednode.es.",
+    "subject": "[MedNode] Consulta web",
+    "autoresponse": "Hola,\n\nGràcies per contactar amb MedNode. Hem rebut el teu missatge correctament.\n\nEt respondrem en 1–2 dies laborables a l'adreça de correu que ens has indicat.\n\n—\nCorreu automàtic (no responguis a aquesta adreça).\nConsultes: info@mednode.es\nhttps://mednode.es\n\nEquip MedNode",
+    "privacyPrefix": "He llegit i accepto la ",
+    "privacyLink": "política de privacitat",
+    "privacyHref": "/ca/privacitat/",
+    "required": "Omple els camps obligatoris.",
+    "invalidEmail": "Introdueix un correu vàlid.",
+    "privacyRequired": "Has d'acceptar la política de privacitat per enviar el missatge."
+  },
   "contact": {
     "title": "Vols saber com MedNode pot ajudar el teu hospital?",
     "subtitle": "Explica'ns les teves necessitats i t'assessorem sense compromís.",

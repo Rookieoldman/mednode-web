@@ -60,6 +60,32 @@
       }
     ]
   },
+  "contactModal": {
+    "title": "Escríbenos",
+    "intro": "Cuéntanos tu caso y te responderemos en 1–2 días laborables.",
+    "name": "Nombre",
+    "namePh": "Tu nombre",
+    "email": "Correo",
+    "emailPh": "tu@correo.com",
+    "org": "Hospital u organización (opcional)",
+    "orgPh": "Nombre del centro",
+    "message": "Mensaje",
+    "messagePh": "¿En qué podemos ayudarte?",
+    "send": "Enviar mensaje",
+    "gmail": "Abrir en Gmail",
+    "close": "Cerrar",
+    "sending": "Enviando…",
+    "success": "Mensaje enviado. Te responderemos pronto a la dirección indicada.",
+    "error": "No se pudo enviar automáticamente. Usa «Abrir en Gmail» o escribe a info@mednode.es.",
+    "subject": "[MedNode] Consulta web",
+    "autoresponse": "Hola,\n\nGracias por contactar con MedNode. Hemos recibido tu mensaje correctamente.\n\nTe responderemos en 1–2 días laborables a la dirección de correo que nos has indicado.\n\n—\nCorreo automático (no responder a esta dirección).\nConsultas: info@mednode.es\nhttps://mednode.es\n\nEquipo MedNode",
+    "privacyPrefix": "He leído y acepto la ",
+    "privacyLink": "política de privacidad",
+    "privacyHref": "/es/privacidad/",
+    "required": "Completa los campos obligatorios.",
+    "invalidEmail": "Introduce un correo válido.",
+    "privacyRequired": "Debes aceptar la política de privacidad para enviar el mensaje."
+  },
   "contact": {
     "title": "¿Quieres saber cómo MedNode puede ayudar a tu hospital?",
     "subtitle": "Cuéntanos tus necesidades y te asesoramos sin compromiso.",
