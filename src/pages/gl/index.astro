@@ -6,6 +6,7 @@ import Products from '../../components/Products.astro';
 import Advantages from '../../components/Advantages.astro';
 import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
+import TrustBar from '../../components/TrustBar.astro';
 import t from '../../i18n/gl.json';
 
 const lang = 'gl';
@@ -13,7 +14,8 @@ const lang = 'gl';
 <Layout title={t.meta.title} description={t.meta.description} lang={lang}>
   <Navbar t={t.nav} lang={lang} />
   <main>
-    <Hero t={t.hero} />
+    <Hero t={t.hero} exploreLabel={t.nav.products} />
+    <TrustBar lang={lang} />
     <Products t={t.products} />
     <Advantages t={t.advantages} />
     <Contact t={t.contact} />

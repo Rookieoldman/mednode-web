@@ -1,0 +1,96 @@
+/* Tema hospitalario profesional — rama feat/design-hospital-pro */
+
+@keyframes hospital-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hospital-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes hospital-pulse-line {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.theme-hospital .animate-hospital-in {
+  animation: hospital-fade-up 0.7s ease-out both;
+}
+
+.theme-hospital .animate-hospital-in-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.theme-hospital .animate-hospital-in-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.theme-hospital .animate-hospital-in-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.theme-hospital .hospital-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.theme-hospital .hospital-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.theme-hospital .hospital-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(15, 40, 71, 0.18);
+}
+
+.theme-hospital .hospital-accent-bar {
+  background: linear-gradient(180deg, #0d9488 0%, #0369a1 100%);
+}
+
+.theme-hospital .btn-hospital-primary {
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.theme-hospital .btn-hospital-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-hospital .animate-hospital-in,
+  .theme-hospital .animate-hospital-in-delay-1,
+  .theme-hospital .animate-hospital-in-delay-2,
+  .theme-hospital .animate-hospital-in-delay-3 {
+    animation: none;
+  }
+
+  .theme-hospital .hospital-card:hover {
+    transform: none;
+  }
+}

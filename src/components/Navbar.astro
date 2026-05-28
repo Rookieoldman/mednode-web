@@ -10,32 +10,50 @@ interface Props {
 
 const { t, lang } = Astro.props;
 ---
-<header class="sticky top-0 z-50 bg-white shadow-sm">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-    <Logo />
+<header
+  class="sticky top-0 z-50 border-b border-white/10 bg-clinical-950/90 backdrop-blur-md shadow-lg shadow-clinical-950/20"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
+    <Logo variant="light" />
 
-    <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
-      <a href="#products" class="font-semibold text-gray-700 hover:text-medblue-500 transition-colors">{t.products}</a>
-      <a href="#advantages" class="font-semibold text-gray-700 hover:text-medblue-500 transition-colors">{t.advantages}</a>
-      <a href="#contact" class="font-semibold text-gray-700 hover:text-medblue-500 transition-colors">{t.contact}</a>
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Principal">
+      <a
+        href="#products"
+        class="rounded-lg px-4 py-2 text-sm font-semibold text-clinical-100 transition hover:bg-white/10 hover:text-white"
+        >{t.products}</a
+      >
+      <a
+        href="#advantages"
+        class="rounded-lg px-4 py-2 text-sm font-semibold text-clinical-100 transition hover:bg-white/10 hover:text-white"
+        >{t.advantages}</a
+      >
+      <a
+        href="#contact"
+        class="rounded-lg px-4 py-2 text-sm font-semibold text-clinical-100 transition hover:bg-white/10 hover:text-white"
+        >{t.contact}</a
+      >
     </nav>
 
     <div class="hidden md:block">
-      <LanguageSwitcher lang={lang} />
+      <LanguageSwitcher lang={lang} variant="dark" />
     </div>
 
     <details class="relative md:hidden">
-      <summary class="list-none cursor-pointer rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-medblue-900">
+      <summary
+        class="list-none cursor-pointer rounded-lg border border-white/20 bg-white/5 px-3 py-2 text-sm font-semibold text-white"
+      >
         Menú
       </summary>
-      <div class="absolute right-0 mt-2 w-56 rounded-xl border border-gray-200 bg-white p-4 shadow-lg">
-        <nav class="flex flex-col gap-3" aria-label="Mòbil">
-          <a href="#products" class="font-semibold text-gray-700">{t.products}</a>
-          <a href="#advantages" class="font-semibold text-gray-700">{t.advantages}</a>
-          <a href="#contact" class="font-semibold text-gray-700">{t.contact}</a>
+      <div
+        class="absolute right-0 mt-2 w-56 rounded-xl border border-white/15 bg-clinical-900 p-4 shadow-xl"
+      >
+        <nav class="flex flex-col gap-1" aria-label="Mòbil">
+          <a href="#products" class="rounded-lg px-3 py-2 font-semibold text-clinical-100">{t.products}</a>
+          <a href="#advantages" class="rounded-lg px-3 py-2 font-semibold text-clinical-100">{t.advantages}</a>
+          <a href="#contact" class="rounded-lg px-3 py-2 font-semibold text-clinical-100">{t.contact}</a>
         </nav>
-        <div class="mt-4 border-t border-gray-100 pt-4">
-          <LanguageSwitcher lang={lang} />
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <LanguageSwitcher lang={lang} variant="dark" />
         </div>
       </div>
     </details>
