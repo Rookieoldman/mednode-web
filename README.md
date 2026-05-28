@@ -6,8 +6,9 @@ Landing page estàtica per a [mednode.cat](https://mednode.cat) (i redirecció d
 
 - `index.html` — redirecció per domini (`mednode.cat` → `/ca/`, `mednode.es` → `/es/`)
 - `ca/`, `es/`, `eu/`, `gl/` — versions per idioma
-- `css/style.css`, `js/main.js`, `img/mednode-logo.svg`
-- `CNAME` — domini personalitzat GitHub Pages (`mednode.cat`)
+- `css/style.css`, `js/main.js`, `img/og-image.svg`
+- `CNAME` — domini personalitzat GitHub Pages (`mednode.es`)
+- `docs/correo-improvmx.md` — reenviament de `info@mednode.es` amb ImprovMX + DNS Hostinger
 
 ## Desenvolupament local
 
@@ -30,14 +31,21 @@ A **GitHub Pages** el repo es publica sota `/mednode-web/`; `js/site-base.js` aj
 
 ### DNS (Hostinger)
 
-**mednode.cat**
+**Web (GitHub Pages)** — domini `mednode.es` (fitxer `CNAME` del repo)
 
 | Tipus | Nom | Valor |
 |-------|-----|--------|
-| CNAME | www | `<usuari>.github.io` |
 | A | @ | 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 |
+| CNAME | www | `rookieoldman.github.io` |
 
-**mednode.es** — redirecció 301 cap a mednode.cat (configuració al panell Hostinger).
+**Correu (ImprovMX)** — reenviament de `info@mednode.es`:
+
+| Tipus | Nom | Valor |
+|-------|-----|--------|
+| MX | @ | 10 → `mx1.improvmx.com`, 20 → `mx2.improvmx.com` |
+| TXT | @ | `v=spf1 include:spf.improvmx.com ~all` |
+
+Guia: **[docs/correo-improvmx.md](docs/correo-improvmx.md)** · [Inspector DNS](https://inspector.improvmx.com/mednode.es)
 
 ## Idiomes
 
@@ -67,7 +75,8 @@ Opcional: afegir una imatge OG en PNG 1200×630 (`img/og-image.png`) per a xarxe
 
 ## Contacte
 
-info@mednode.es
+- Web: `mailto:info@mednode.es` (enllaços a les pàgines CA/ES/EU/GL)
+- Operativa: reenviament ImprovMX → veure [docs/correo-improvmx.md](docs/correo-improvmx.md)
 
 ## Llicència
 

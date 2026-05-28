@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MedNode — Software sanitario para hospitais públicos</title>
-  <meta name="description" content="MedNode dixitaliza consentementos informados, traslados de pacientes e fluxos hospitalarios. Integrado co teu HIS. MedSign e MedFlow para hospitais públicos. Desenvolvido en Girona.">
+  <meta name="description" content="MedNode dixitaliza consentementos informados, traslados de pacientes e fluxos hospitalarios. Integrado co teu HIS. MedSign e MedFlow para hospitais públicos.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="MedNode">
-  <meta name="keywords" content="MedNode, software sanitario, hospital, HIS, consentimento informado, MedSign, MedFlow, Girona">
+  <meta name="keywords" content="MedNode, software sanitario, hospital, HIS, consentimento informado, MedSign, MedFlow">
   <meta name="theme-color" content="#0077B6">
   <link rel="canonical" href="https://mednode.cat/gl/">
   <link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/">
@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/">
   <link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/">
   <link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MedNode">
   <meta property="og:locale" content="gl_ES">
@@ -31,13 +31,10 @@
   <meta name="twitter:title" content="MedNode — Software sanitario para hospitais públicos">
   <meta name="twitter:description" content="MedSign, MedFlow e integración HIS para hospitais públicos.">
   <meta name="twitter:image" content="https://mednode.cat/img/og-image.svg">
-  <script src="../js/site-base.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/mednode-logo.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/mednode-logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,11 +44,9 @@
         "@id": "https://mednode.cat/#organization",
         "name": "MedNode",
         "url": "https://mednode.cat/",
-        "logo": "https://mednode.cat/img/mednode-logo.svg",
         "email": "info@mednode.es",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Girona",
           "addressCountry": "ES"
         }
       },
@@ -99,19 +94,24 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo-link" href="gl/" aria-label="MedNode — Inicio">
-        <img class="logo-icon" src="img/mednode-logo.svg" width="40" height="40" alt="">
-        <span>MedNode</span>
-      </a>
-      <nav class="lang-switcher" aria-label="Idioma" data-lang-switcher>
-        <a href="ca/" data-lang="ca" hreflang="ca">CA</a>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="es/" data-lang="es" hreflang="es">ES</a>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="eu/" data-lang="eu" hreflang="eu">EU</a>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <span aria-current="page" data-lang="gl">GL</span>
-      </nav>
+      <a class="logo-link" href="./" aria-label="MedNode — Inicio">MedNode</a>
+      <div class="header-end">
+        <nav class="main-nav" aria-label="Seccións principais">
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre-nos">Sobre nós</a>
+          <a href="#como-traballamos">Como traballamos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <nav class="lang-switcher" aria-label="Idioma" data-lang-switcher>
+          <a href="../ca/" data-lang="ca" hreflang="ca">CA</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a href="../es/" data-lang="es" hreflang="es">ES</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a href="../eu/" data-lang="eu" hreflang="eu">EU</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <span aria-current="page" data-lang="gl">GL</span>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -119,9 +119,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-content">
+          <p class="hero-badge">Software sanitario para hospitais públicos</p>
           <h1 id="hero-title">A plataforma que conecta os procesos clínicos do teu hospital</h1>
-          <p class="hero-lead">MedNode dixitaliza consentementos informados, traslados de pacientes e fluxos de traballo hospitalarios. Integrado co teu HIS.</p>
-          <a class="btn btn-primary" href="mailto:info@mednode.es">Contacta connosco</a>
+          <p class="hero-lead">MedNode dixitaliza consentementos informados, traslados de pacientes e fluxos de traballo hospitalarios. Integrado co teu HIS, cun equipo próximo que fala a túa lingua.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:info@mednode.es?subject=Consulta%20desde%20a%20web%20MedNode">Contacta connosco</a>
+            <a class="btn btn-secondary" href="#sobre-nos">Coñece MedNode</a>
+          </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <svg class="nodes-graph" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -141,9 +145,27 @@
       </div>
     </section>
 
+    <section class="trust-strip" aria-label="Datos de confianza">
+      <div class="trust-grid">
+        <div class="trust-item reveal">
+          <strong>Soporte próximo</strong>
+          <span>Desenvolvemento e acompañamento en galego e castelán</span>
+        </div>
+        <div class="trust-item reveal">
+          <strong>Hospitais públicos</strong>
+          <span>Solucións pensadas para a realidade do sistema sanitario</span>
+        </div>
+        <div class="trust-item reveal">
+          <strong>Datos no hospital</strong>
+          <span>Despregue on-premise e cumprimento RXPD / eIDAS</span>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="produtos" aria-labelledby="products-title">
       <div class="section-inner">
         <h2 id="products-title" class="reveal">Produtos</h2>
+        <p class="section-intro reveal">Dous módulos que se complementan e intégranse co teu entorno clínico actual.</p>
         <div class="products-grid">
           <article class="product-card reveal">
             <div class="product-icons" aria-hidden="true">
@@ -151,7 +173,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg>
             </div>
-            <h3>MedSign</h3>
+            <h3>MedSign<span class="reg" aria-hidden="true">®</span></h3>
             <p><strong>Consentimento informado dixital.</strong> Sinatura electrónica integrada co HIS. Eliminación do papel no proceso de consentimento do paciente.</p>
           </article>
           <article class="product-card reveal">
@@ -160,16 +182,89 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 16l8-8"/></svg>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V9l6-4 6 4v12"/><path d="M10 14h4v7h-4z"/></svg>
             </div>
-            <h3>MedFlow</h3>
+            <h3>MedFlow<span class="reg" aria-hidden="true">®</span></h3>
             <p><strong>Xestión de traslados e fluxos de pacientes.</strong> Coordinación en tempo real entre servizos. Trazabilidade completa do percorrido do paciente.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="vantaxes" aria-labelledby="advantages-title">
+    <section class="section" id="sobre-nos" aria-labelledby="about-title">
       <div class="section-inner">
-        <h2 id="advantages-title" class="reveal">Vantaxes</h2>
+        <h2 id="about-title" class="reveal">Sobre nós</h2>
+        <p class="section-intro reveal">Persoas que entenden os hospitais, non só o código.</p>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>MedNode nace cunha convicción clara: a tecnoloxía sanitaria debe facilitar o traballo dos profesionais e mellorar a experiencia do paciente, sen engadir complexidade.</p>
+            <p>Colaboramos con equipos clínicos, enfermería, documentación e sistemas para dixitalizar procesos que aínda dependen do papel ou de canles informais.</p>
+            <p>Non vendemos un produto pechado nunha caixa: escoitamos, adaptamos e acompañamos antes, durante e despois do despregue.</p>
+          </div>
+          <aside class="about-highlight reveal">
+            <blockquote>«O noso obxectivo é que o persoal clínico note o cambio ao día seguinte: menos papel, menos chamadas, máis trazabilidade.»</blockquote>
+            <cite>— Equipo MedNode</cite>
+            <ul class="about-list">
+              <li>Experiencia en contornos hospitalarios públicos</li>
+              <li>Integración con SAP IS-H e outros HIS</li>
+              <li>Soporte humano, non só tickets</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="valores" aria-labelledby="values-title">
+      <div class="section-inner">
+        <h2 id="values-title" class="reveal">O que nos move</h2>
+        <p class="section-intro reveal">Tres principios que guían cada proxecto co teu hospital.</p>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <span class="value-num">01</span>
+            <h3>O paciente no centro</h3>
+            <p>Consentimentos claros, menos esperas e información accesible en todo o proceso asistencial.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-num">02</span>
+            <h3>Colaboración real</h3>
+            <p>Traballamos xunto ao teu equipo: enfermería, médicos, sistemas e dirección. Escoitamos antes de propor.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-num">03</span>
+            <h3>Confianza e seguridade</h3>
+            <p>Datos dentro do hospital, trazabilidade completa e cumprimento da normativa sanitaria e de protección de datos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-traballamos" aria-labelledby="process-title">
+      <div class="section-inner">
+        <h2 id="process-title" class="reveal">Como traballamos</h2>
+        <p class="section-intro reveal">Un proceso claro, sen sorpresas, adaptado a cada centro.</p>
+        <div class="process-steps">
+          <article class="process-step reveal">
+            <h3>Primeira conversa</h3>
+            <p>Entendemos os teus fluxos, os puntos de dor e os obxectivos. Sen compromiso.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Deseño e integración</h3>
+            <p>Definimos como MedSign e MedFlow encaixan co teu HIS e os equipos implicados.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Despregue</h3>
+            <p>Implementación on-premise, probas con usuarios reais e formación práctica.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Acompañamento</h3>
+            <p>Soporte continuo, melloras evolutivas e un interlocutor que coñece o teu proxecto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="vantaxes" aria-labelledby="advantages-title">
+      <div class="section-inner">
+        <h2 id="advantages-title" class="reveal">Por que MedNode</h2>
+        <p class="section-intro reveal">Beneficios concretos para dirección, sistemas e equipos asistenciais.</p>
         <div class="advantages-grid">
           <div class="advantage-item reveal">
             <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -195,12 +290,41 @@
       </div>
     </section>
 
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-inner">
+        <h2 id="faq-title" class="reveal">Preguntas frecuentes</h2>
+        <p class="section-intro reveal">Respostas breves antes da primeira reunión.</p>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Para que hospitais está dirixido MedNode?</summary>
+            <p>Principalmente hospitais públicos e entidades do sistema sanitario que necesitan dixitalizar consentimentos, traslados e fluxos sen substituír o seu HIS.</p>
+          </details>
+          <details class="faq-item">
+            <summary>É preciso cambiar o sistema de información actual?</summary>
+            <p>Non. MedSign e MedFlow intégranse co voso HIS (SAP IS-H e outros). O obxectivo é complementar o que xa tedes.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Onde se gardan os datos?</summary>
+            <p>O despregue é on-premise: a información permanece na infraestrutura do hospital.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como podemos pedir unha demo?</summary>
+            <p>Escribe a info@mednode.es e concertaremos unha sesión para coñecer o teu caso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
       <div class="section-inner reveal">
         <h2 id="contact-title">Contacto</h2>
         <p>Queres saber como MedNode pode axudar ao teu hospital?</p>
-        <p class="contact-email"><a href="mailto:info@mednode.es">info@mednode.es</a></p>
-        <a class="btn btn-primary" href="mailto:info@mednode.es">Escríbenos</a>
+        <p class="contact-email"><a href="mailto:info@mednode.es?subject=Consulta%20desde%20a%20web%20MedNode">info@mednode.es</a></p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:info@mednode.es?subject=Consulta%20desde%20a%20web%20MedNode">Escríbenos</a>
+          <a class="contact-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@mednode.es&amp;su=Consulta%20desde%20a%20web%20MedNode" target="_blank" rel="noopener noreferrer">Abrir en Gmail</a>
+        </div>
+        <p class="contact-hint">Se o botón non abre o correo, usa Gmail ou escribe directamente a info@mednode.es</p>
       </div>
     </section>
   </main>
@@ -208,19 +332,27 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-copy">© 2026 MedNode</p>
+      <nav class="footer-nav" aria-label="Enlaces do pé">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre-nos">Sobre nós</a>
+        <a href="#como-traballamos">Como traballamos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
       <nav class="lang-switcher" aria-label="Idioma" data-lang-switcher>
-        <a href="ca/" data-lang="ca" hreflang="ca">CA</a>
+        <a href="../ca/" data-lang="ca" hreflang="ca">CA</a>
         <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="es/" data-lang="es" hreflang="es">ES</a>
+        <a href="../es/" data-lang="es" hreflang="es">ES</a>
         <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="eu/" data-lang="eu" hreflang="eu">EU</a>
+        <a href="../eu/" data-lang="eu" hreflang="eu">EU</a>
         <span class="lang-sep" aria-hidden="true">|</span>
         <span aria-current="page" data-lang="gl">GL</span>
       </nav>
-      <p class="footer-tagline">Software sanitario desenvolvido en Girona</p>
+      <p class="footer-tagline">Software sanitario para hospitais públicos</p>
+      <p class="footer-legal">MedSign<span class="reg" aria-hidden="true">®</span> e MedFlow<span class="reg" aria-hidden="true">®</span> son marcas rexistradas.</p>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </body>
 </html>

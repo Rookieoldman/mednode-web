@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MedNode — Ospitale publikoetarako osasun-softwarea</title>
-  <meta name="description" content="MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua. MedSign eta MedFlow ospitale publikoetarako. Gironan garatua.">
+  <meta name="description" content="MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua. MedSign eta MedFlow ospitale publikoetarako.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="MedNode">
-  <meta name="keywords" content="MedNode, osasun-software, ospitale, HIS, baimen informatu, MedSign, MedFlow, Gipuzkoa, Girona">
+  <meta name="keywords" content="MedNode, osasun-software, ospitale, HIS, baimen informatu, MedSign, MedFlow">
   <meta name="theme-color" content="#0077B6">
   <link rel="canonical" href="https://mednode.cat/eu/">
   <link rel="alternate" hreflang="ca" href="https://mednode.cat/ca/">
@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="eu" href="https://mednode.cat/eu/">
   <link rel="alternate" hreflang="gl" href="https://mednode.cat/gl/">
   <link rel="alternate" hreflang="x-default" href="https://mednode.cat/es/">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MedNode">
   <meta property="og:locale" content="eu_ES">
@@ -31,13 +31,10 @@
   <meta name="twitter:title" content="MedNode — Ospitale publikoetarako osasun-softwarea">
   <meta name="twitter:description" content="MedSign, MedFlow eta HIS integrazioa ospitale publikoentzat.">
   <meta name="twitter:image" content="https://mednode.cat/img/og-image.svg">
-  <script src="../js/site-base.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/mednode-logo.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/mednode-logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,11 +44,9 @@
         "@id": "https://mednode.cat/#organization",
         "name": "MedNode",
         "url": "https://mednode.cat/",
-        "logo": "https://mednode.cat/img/mednode-logo.svg",
         "email": "info@mednode.es",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Girona",
           "addressCountry": "ES"
         }
       },
@@ -99,19 +94,24 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo-link" href="eu/" aria-label="MedNode — Hasiera">
-        <img class="logo-icon" src="img/mednode-logo.svg" width="40" height="40" alt="">
-        <span>MedNode</span>
-      </a>
-      <nav class="lang-switcher" aria-label="Hizkuntza" data-lang-switcher>
-        <a href="ca/" data-lang="ca" hreflang="ca">CA</a>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="es/" data-lang="es" hreflang="es">ES</a>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <span aria-current="page" data-lang="eu">EU</span>
-        <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="gl/" data-lang="gl" hreflang="gl">GL</a>
-      </nav>
+      <a class="logo-link" href="./" aria-label="MedNode — Hasiera">MedNode</a>
+      <div class="header-end">
+        <nav class="main-nav" aria-label="Atal nagusiak">
+          <a href="#produktuak">Produktuak</a>
+          <a href="#guri-buruz">Guri buruz</a>
+          <a href="#nola-lanetzen">Nola lan egiten dugu</a>
+          <a href="#kontaktua">Kontaktua</a>
+        </nav>
+        <nav class="lang-switcher" aria-label="Hizkuntza" data-lang-switcher>
+          <a href="../ca/" data-lang="ca" hreflang="ca">CA</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a href="../es/" data-lang="es" hreflang="es">ES</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <span aria-current="page" data-lang="eu">EU</span>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a href="../gl/" data-lang="gl" hreflang="gl">GL</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -119,9 +119,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-content">
+          <p class="hero-badge">Osasun-softwarea ospitale publikoetarako</p>
           <h1 id="hero-title">Zure ospitaleko prozesu klinikoak konektatzen dituen plataforma</h1>
-          <p class="hero-lead">MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua.</p>
-          <a class="btn btn-primary" href="mailto:info@mednode.es">Jarri gurekin harremanetan</a>
+          <p class="hero-lead">MedNode-k baimen informatuak, pazienteen trasladoak eta ospitaleko lan-fluxuak digitalizatzen ditu. Zure HIS-arekin integratua, gertuko ekipo batekin.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:info@mednode.es?subject=MedNode%20webgunearen%20kontsulta">Jarri gurekin harremanetan</a>
+            <a class="btn btn-secondary" href="#guri-buruz">Ezagutu MedNode</a>
+          </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <svg class="nodes-graph" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -141,9 +145,27 @@
       </div>
     </section>
 
+    <section class="trust-strip" aria-label="Konfiantza datuak">
+      <div class="trust-grid">
+        <div class="trust-item reveal">
+          <strong>Laguntza hurbila</strong>
+          <span>Hurbileko garapena eta laguntza euskaraz eta gaztelaniaz</span>
+        </div>
+        <div class="trust-item reveal">
+          <strong>Ospitale publikoak</strong>
+          <span>Sistema sanitarioaren errealitatera egokitutako soluzioak</span>
+        </div>
+        <div class="trust-item reveal">
+          <strong>Datuak ospitalean</strong>
+          <span>On-premise hedapena eta RGPD / eIDAS betetzea</span>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="produktuak" aria-labelledby="products-title">
       <div class="section-inner">
         <h2 id="products-title" class="reveal">Produktuak</h2>
+        <p class="section-intro reveal">Elkar osatzen duten bi modulu, zure ingurune klinikoarekin integratuta.</p>
         <div class="products-grid">
           <article class="product-card reveal">
             <div class="product-icons" aria-hidden="true">
@@ -151,7 +173,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg>
             </div>
-            <h3>MedSign</h3>
+            <h3>MedSign<span class="reg" aria-hidden="true">®</span></h3>
             <p><strong>Baimen informatu digitala.</strong> Sinadura elektronikoa HIS-arekin integratua. Papera kentzea pazientearen baimen-prozesuan.</p>
           </article>
           <article class="product-card reveal">
@@ -160,16 +182,89 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 16l8-8"/></svg>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V9l6-4 6 4v12"/><path d="M10 14h4v7h-4z"/></svg>
             </div>
-            <h3>MedFlow</h3>
+            <h3>MedFlow<span class="reg" aria-hidden="true">®</span></h3>
             <p><strong>Pazienteen trasladoen eta fluxuen kudeaketa.</strong> Zerbitzuen arteko koordinazioa denbora errealean. Pazientearen ibilbidearen trazabilitate osoa.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="abantailak" aria-labelledby="advantages-title">
+    <section class="section" id="guri-buruz" aria-labelledby="about-title">
       <div class="section-inner">
-        <h2 id="advantages-title" class="reveal">Abantailak</h2>
+        <h2 id="about-title" class="reveal">Guri buruz</h2>
+        <p class="section-intro reveal">Ospitaleak ulertzen dituzten pertsonak, ez soilik kodea.</p>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>MedNode helburu argi batekin sortu zen: teknologia sanitarioak profesionalen lana erraztu eta pazientearen esperientzia hobetu behar du, konplexutasunik gabe.</p>
+            <p>Talde klinikoekin, erizaintzarekin, dokumentazioarekin eta sistemekin elkarlanean aritzen gara oraindik paperean edo kanal informaletan dabiltzan prozesuak digitalizatzeko.</p>
+            <p>Ez dugu produktu itxi bat salkitzen: entzuten dugu, egokitzen dugu eta laguntzen dugu hedapen aurretik, bitartean eta ondoren.</p>
+          </div>
+          <aside class="about-highlight reveal">
+            <blockquote>«Gure helburua da langile klinikoek hurrengo egunean aldea notea: paper gutxiago, dei gutxiago, trazabilitate gehiago.»</blockquote>
+            <cite>— MedNode taldea</cite>
+            <ul class="about-list">
+              <li>Ospitale publikoen esperientzia</li>
+              <li>SAP IS-H eta beste HIS-ekin integrazioa</li>
+              <li>Euskarri humanoa, ez tiketak soilik</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="balioak" aria-labelledby="values-title">
+      <div class="section-inner">
+        <h2 id="values-title" class="reveal">Gure balioak</h2>
+        <p class="section-intro reveal">Hiru printzipio zure ospitalearekin egindako proiektu bakoitza gidatzen dutenak.</p>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <span class="value-num">01</span>
+            <h3>Pazientea erdigunean</h3>
+            <p>Baimen argiak, itxaronaldi gutxiago eta informazioa eskuragarri prozesu osoan.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-num">02</span>
+            <h3>Elkarlanean</h3>
+            <p>Zure taldearekin lanean: erizaintza, medikuak, sistemak eta zuzendaritza. Proposatu baino lehen entzuten dugu.</p>
+          </article>
+          <article class="value-card reveal">
+            <span class="value-num">03</span>
+            <h3>Konfiantza eta segurtasuna</h3>
+            <p>Datuak ospitalean, trazabilitate osoa eta araudi sanitarioaren betetzea.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nola-lanetzen" aria-labelledby="process-title">
+      <div class="section-inner">
+        <h2 id="process-title" class="reveal">Nola lan egiten dugu</h2>
+        <p class="section-intro reveal">Prozesu argia, zentro bakoitzerako egokituta.</p>
+        <div class="process-steps">
+          <article class="process-step reveal">
+            <h3>Lehen elkarrizketa</h3>
+            <p>Zure fluxuak, min-puntuak eta helburuak ulertzen ditugu. Konpromisorik gabe.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Diseinua eta integrazioa</h3>
+            <p>MedSign eta MedFlow zure HIS-arekin nola lotzen diren definitzen dugu.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Hedapena</h3>
+            <p>On-premise inplementazioa, erabiltzaileekin probak eta prestakuntza praktikoa.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Laguntza jarraitua</h3>
+            <p>Euskarri etengabea eta zure proiektua ezagutzen duen interlokutore bat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="abantailak" aria-labelledby="advantages-title">
+      <div class="section-inner">
+        <h2 id="advantages-title" class="reveal">Zergatik MedNode</h2>
+        <p class="section-intro reveal">Onura zehatzak zuzendaritzarako, sistemenetarako eta talde klinikoetarako.</p>
         <div class="advantages-grid">
           <div class="advantage-item reveal">
             <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -195,12 +290,41 @@
       </div>
     </section>
 
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-inner">
+        <h2 id="faq-title" class="reveal">Galdera arruntak</h2>
+        <p class="section-intro reveal">Erantzun laburrak lehen bilera baino lehen.</p>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Zer ospitaletarako da MedNode?</summary>
+            <p>Batez ere ospitale publikoetarako eta sistema sanitarioko erakundetarako, baimenak eta fluxuak digitalizatu nahi dituztenak, HIS ordezkatu gabe.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Informazio-sistema aldatu behar da?</summary>
+            <p>Ez. MedSign eta MedFlow zure HIS-arekin integratzen dira. Dagoena osatzea da helburua.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Non gordetzen dira datuak?</summary>
+            <p>On-premise hedapena: informazioa ospitalearen azpiegituretan geratzen da.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Nola eska dezakegu demo bat?</summary>
+            <p>Idatzi info@mednode.es helbidera eta zure kasua ezagutzeko saio bat antolatuko dugu.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact-section" id="kontaktua" aria-labelledby="contact-title">
       <div class="section-inner reveal">
         <h2 id="contact-title">Kontaktua</h2>
         <p>Jakin nahi duzu MedNode-k nola lagundu diezaiokeen zure ospitaleari?</p>
-        <p class="contact-email"><a href="mailto:info@mednode.es">info@mednode.es</a></p>
-        <a class="btn btn-primary" href="mailto:info@mednode.es">Idatzi guri</a>
+        <p class="contact-email"><a href="mailto:info@mednode.es?subject=MedNode%20webgunearen%20kontsulta">info@mednode.es</a></p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:info@mednode.es?subject=MedNode%20webgunearen%20kontsulta">Idatzi guri</a>
+          <a class="contact-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@mednode.es&amp;su=MedNode%20webgunearen%20kontsulta" target="_blank" rel="noopener noreferrer">Ireki Gmail-en</a>
+        </div>
+        <p class="contact-hint">Posta ez bada irekitzen, erabili Gmail edo idatzi zuzenean info@mednode.es helbidera</p>
       </div>
     </section>
   </main>
@@ -208,19 +332,27 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-copy">© 2026 MedNode</p>
+      <nav class="footer-nav" aria-label="Orri-oineko estekak">
+        <a href="#produktuak">Produktuak</a>
+        <a href="#guri-buruz">Guri buruz</a>
+        <a href="#nola-lanetzen">Nola lan egiten dugu</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontaktua">Kontaktua</a>
+      </nav>
       <nav class="lang-switcher" aria-label="Hizkuntza" data-lang-switcher>
-        <a href="ca/" data-lang="ca" hreflang="ca">CA</a>
+        <a href="../ca/" data-lang="ca" hreflang="ca">CA</a>
         <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="es/" data-lang="es" hreflang="es">ES</a>
+        <a href="../es/" data-lang="es" hreflang="es">ES</a>
         <span class="lang-sep" aria-hidden="true">|</span>
         <span aria-current="page" data-lang="eu">EU</span>
         <span class="lang-sep" aria-hidden="true">|</span>
-        <a href="gl/" data-lang="gl" hreflang="gl">GL</a>
+        <a href="../gl/" data-lang="gl" hreflang="gl">GL</a>
       </nav>
-      <p class="footer-tagline">Gironan garatutako osasun-softwarea</p>
+      <p class="footer-tagline">Osasun-softwarea ospitale publikoetarako</p>
+      <p class="footer-legal">MedSign<span class="reg" aria-hidden="true">®</span> eta MedFlow<span class="reg" aria-hidden="true">®</span> erregistratutako markak dira.</p>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </body>
 </html>

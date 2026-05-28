@@ -1,6 +1,6 @@
 /**
  * GitHub Pages project sites live under /repo-name/; custom domains use /.
- * Sets <base> so root-relative asset paths (css/, js/, ca/) resolve correctly.
+ * Exposes MEDNODE_PREFIX for the root redirect only (no <base> — breaks mailto: in Chrome).
  */
 (function () {
   "use strict";
@@ -22,11 +22,6 @@
     return "";
   }
 
-  var prefix = getSitePrefix();
-  window.MEDNODE_PREFIX = prefix;
-  window.MEDNODE_BASE = prefix ? prefix + "/" : "/";
-
-  var base = document.createElement("base");
-  base.href = window.MEDNODE_BASE;
-  document.head.prepend(base);
+  window.MEDNODE_PREFIX = getSitePrefix();
+  window.MEDNODE_BASE = window.MEDNODE_PREFIX ? window.MEDNODE_PREFIX + "/" : "/";
 })();
