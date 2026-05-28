@@ -1,11 +1,14 @@
 /**
- * Modal de contacto — envío vía FormSubmit + alternativa Gmail.
+ * Modal de contacto — FormSubmit (POST + autorespuesta) + alternativa Gmail.
+ * Clave de formulario activada en mednode.es (no exponer info@ en la URL).
  */
 (function () {
   "use strict";
 
   var EMAIL = "info@mednode.es";
-  var FORMSUBMIT = "https://formsubmit.co/ajax/" + EMAIL;
+  /** Sustituye el email en la URL tras activar el formulario en FormSubmit */
+  var FORMSUBMIT_KEY = "1b11f3f7b22760ae01e4c7d13e05d2b1";
+  var FORMSUBMIT_ACTION = "https://formsubmit.co/" + FORMSUBMIT_KEY;
 
   var I18N = {
     es: {
@@ -26,7 +29,9 @@
       success: "Mensaje enviado. Te responderemos pronto a la dirección indicada.",
       error:
         "No se pudo enviar automáticamente. Usa «Abrir en Gmail» o escribe a info@mednode.es.",
-      subject: "Consulta desde la web MedNode",
+      subject: "[MedNode] Consulta web",
+      autoresponse:
+        "Hola,\n\nGracias por contactar con MedNode. Hemos recibido tu mensaje correctamente.\n\nTe responderemos en 1–2 días laborables a la dirección de correo que nos has indicado.\n\n—\nCorreo automático (no responder a esta dirección).\nConsultas: info@mednode.es\nhttps://mednode.es\n\nEquipo MedNode",
       required: "Completa los campos obligatorios.",
       invalidEmail: "Introduce un correo válido.",
     },
@@ -48,7 +53,9 @@
       success: "Missatge enviat. Et respondrem aviat a l'adreça indicada.",
       error:
         "No s'ha pogut enviar automàticament. Fes servir «Obrir a Gmail» o escriu a info@mednode.es.",
-      subject: "Consulta des de la web MedNode",
+      subject: "[MedNode] Consulta web",
+      autoresponse:
+        "Hola,\n\nGràcies per contactar amb MedNode. Hem rebut el teu missatge correctament.\n\nEt respondrem en 1–2 dies laborables a l'adreça de correu que ens has indicat.\n\n—\nCorreu automàtic (no responguis a aquesta adreça).\nConsultes: info@mednode.es\nhttps://mednode.es\n\nEquip MedNode",
       required: "Omple els camps obligatoris.",
       invalidEmail: "Introdueix un correu vàlid.",
     },
@@ -70,7 +77,9 @@
       success: "Mezua bidali da. Laster erantzungo dizugu.",
       error:
         "Ezin izan da automatikoki bidali. Erabili «Gmail-en ireki» edo idatzi info@mednode.es helbidera.",
-      subject: "MedNode webgunearen kontsulta",
+      subject: "[MedNode] Kontsulta web",
+      autoresponse:
+        "Kaixo,\n\nEskerrik asko MedNode-rekin harremanetan jartzeagatik. Zure mezua ongi jaso dugu.\n\n1–2 lanegunetan erantzungo dizugu adierazi duzun helbide elektronikora.\n\n—\nMezu automatikoa (ez erantzun helbide honetara).\nKontsultak: info@mednode.es\nhttps://mednode.es\n\nMedNode taldea",
       required: "Bete nahitaezko eremuak.",
       invalidEmail: "Sartu baliozko helbide elektroniko bat.",
     },
@@ -92,7 +101,9 @@
       success: "Mensaxe enviado. Responderémosche pronto ao correo indicado.",
       error:
         "Non se puido enviar automaticamente. Usa «Abrir en Gmail» ou escribe a info@mednode.es.",
-      subject: "Consulta desde a web MedNode",
+      subject: "[MedNode] Consulta web",
+      autoresponse:
+        "Ola,\n\nGrazas por contactar con MedNode. Recibimos a túa mensaxe correctamente.\n\nResponderémosche en 1–2 días laborables ao correo que indicaches.\n\n—\nCorreo automático (non respondas a este enderezo).\nConsultas: info@mednode.es\nhttps://mednode.es\n\nEquipo MedNode",
       required: "Completa os campos obrigatorios.",
       invalidEmail: "Introduce un correo válido.",
     },
@@ -100,6 +111,13 @@
 
   function t(lang) {
     return I18N[lang] || I18N.es;
+  }
+
+  function buildNextUrl() {
+    var url = new URL(window.location.href);
+    url.searchParams.set("contacto", "ok");
+    url.hash = "contacto-enviado";
+    return url.toString();
   }
 
   function buildGmailUrl(data, subject) {
@@ -139,7 +157,19 @@
       '  <p class="contact-modal__intro">' +
       escapeHtml(strings.intro) +
       "</p>" +
-      '  <form class="contact-form" id="contact-form" novalidate>' +
+      '  <form class="contact-form" id="contact-form" method="POST" action="' +
+      escapeAttr(FORMSUBMIT_ACTION) +
+      '" accept-charset="UTF-8" novalidate>' +
+      '    <input type="hidden" name="_subject" value="' +
+      escapeAttr(strings.subject) +
+      '">' +
+      '    <input type="hidden" name="_template" value="table">' +
+      '    <input type="hidden" name="_autoresponse" value="' +
+      escapeAttr(strings.autoresponse) +
+      '">' +
+      '    <input type="hidden" name="_next" value="' +
+      escapeAttr(buildNextUrl()) +
+      '">' +
       '    <input type="text" name="_gotcha" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">' +
       '    <div class="contact-form__field">' +
       '      <label for="contact-name">' +
@@ -284,7 +314,10 @@
       });
     });
 
-    if (window.location.search.indexOf("contacto=ok") !== -1 || window.location.hash === "#contacto-enviado") {
+    if (
+      window.location.search.indexOf("contacto=ok") !== -1 ||
+      window.location.hash === "#contacto-enviado"
+    ) {
       openModal();
       statusEl.textContent = strings.success;
       statusEl.className = "contact-form__status contact-form__status--ok";
@@ -314,44 +347,7 @@
       statusEl.textContent = "";
       statusEl.className = "contact-form__status";
 
-      var payload = {
-        name: data.name,
-        email: data.email,
-        organization: data.organization,
-        message: data.message,
-        _subject: strings.subject,
-        _template: "table",
-        _captcha: "false",
-      };
-
-      fetch(FORMSUBMIT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      })
-        .then(function (res) {
-          if (!res.ok) {
-            throw new Error("submit failed");
-          }
-          return res.json();
-        })
-        .then(function () {
-          statusEl.textContent = strings.success;
-          statusEl.className = "contact-form__status contact-form__status--ok";
-          form.reset();
-          updateGmailHref();
-          submitBtn.disabled = false;
-          submitBtn.textContent = strings.send;
-        })
-        .catch(function () {
-          statusEl.textContent = strings.error;
-          statusEl.className = "contact-form__status contact-form__status--error";
-          submitBtn.disabled = false;
-          submitBtn.textContent = strings.send;
-        });
+      form.submit();
     });
   }
 

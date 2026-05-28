@@ -78,7 +78,8 @@ ImprovMX permite reenvío **gratis**; para **enviar** como `info@mednode.es` hac
 |---------|-------------|
 | DNS no valida | Solo MX de ImprovMX; host `@` correcto en Hostinger |
 | No llega el correo | Alias confirmado en el buzón destino |
-| Va a spam | SPF TXT aplicado; esperar reputación del dominio |
+| Va a spam (correo normal) | SPF TXT aplicado; ver `docs/formulario-contacto.md` → bandeja principal |
+| Avisos del formulario web en spam | FormSubmit + reenvío: marcar «No es spam» y filtro Gmail asunto `[MedNode]` |
 | Web caída | No poner CNAME en `@` si usas A de GitHub + MX |
 
 ---
