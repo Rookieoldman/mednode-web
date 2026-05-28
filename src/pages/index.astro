@@ -4,16 +4,47 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>MedNode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MedNode — Software sanitario para hospitales</title>
+    <meta
+      name="description"
+      content="MedNode digitaliza consentimientos informados, traslados de pacientes y flujos de trabajo hospitalarios. Integrado con tu HIS."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mednode.es/es/" />
+
+    <link rel="alternate" hreflang="es" href="https://mednode.es/es/" />
+    <link rel="alternate" hreflang="ca" href="https://mednode.es/ca/" />
+    <link rel="alternate" hreflang="eu" href="https://mednode.es/eu/" />
+    <link rel="alternate" hreflang="gl" href="https://mednode.es/gl/" />
+    <link rel="alternate" hreflang="x-default" href="https://mednode.es/es/" />
+
+    <meta http-equiv="refresh" content="0;url=/es/" />
+
     <script is:inline>
       const host = window.location.hostname;
-      if (host.endsWith('.cat') || host === 'mednode.cat') {
+      if (host.endsWith('.cat')) {
         window.location.replace('/ca/');
       } else {
         window.location.replace('/es/');
       }
     </script>
-    <meta http-equiv="refresh" content="0;url=/es/" />
   </head>
-  <body></body>
+  <body>
+    <noscript>
+      <h1>MedNode — Software sanitario para hospitales</h1>
+      <p>
+        MedNode digitaliza consentimientos informados, traslados de pacientes y flujos de trabajo
+        hospitalarios.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/ca/">Català</a></li>
+          <li><a href="/eu/">Euskara</a></li>
+          <li><a href="/gl/">Galego</a></li>
+        </ul>
+      </nav>
+    </noscript>
+  </body>
 </html>

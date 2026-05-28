@@ -1,0 +1,97 @@
+---
+import type { Lang } from '../i18n/languages';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const descriptions: Record<Lang, string> = {
+  es: 'Plataforma de software sanitario para gestión hospitalaria. Digitalización de consentimientos informados y gestión de traslados de pacientes.',
+  ca: 'Plataforma de programari sanitari per a gestió hospitalària. Digitalització de consentiments informats i gestió de trasllats de pacients.',
+  eu: 'Ospitale-kudeaketarako osasun-software plataforma. Baimen informatuen digitalizazioa eta pazienteen trasladoen kudeaketa.',
+  gl: 'Plataforma de software sanitario para xestión hospitalaria. Dixitalización de consentementos informados e xestión de traslados de pacientes.',
+};
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'MedNode',
+  url: 'https://mednode.es',
+  logo: 'https://mednode.es/img/og-image.png',
+  description: descriptions[lang],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Girona',
+    addressRegion: 'Catalunya',
+    addressCountry: 'ES',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'info@mednode.es',
+    contactType: 'sales',
+  },
+};
+
+const medsign = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'MedSign',
+  applicationCategory: 'HealthApplication',
+  applicationSubCategory: 'Consentimiento informado digital',
+  operatingSystem: 'Web',
+  description:
+    'Software de consentimiento informado digital con firma electrónica integrada con el HIS hospitalario.',
+  url: 'https://mednode.es',
+  author: { '@type': 'Organization', name: 'MedNode' },
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/OnlineOnly',
+    description: 'Contactar para presupuesto personalizado',
+  },
+  featureList: [
+    'Firma electrónica del paciente en tablet',
+    'Integración con SAP IS-H y otros HIS',
+    'Archivo automático en repositorio documental',
+    'Plantillas personalizables por servicio',
+    'Cumplimiento RGPD y eIDAS',
+  ],
+};
+
+const medflow = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'MedFlow',
+  applicationCategory: 'HealthApplication',
+  applicationSubCategory: 'Gestión de traslados hospitalarios',
+  operatingSystem: 'Web',
+  description: 'Software de gestión de traslados y flujos de pacientes en centros hospitalarios.',
+  url: 'https://mednode.es',
+  author: { '@type': 'Organization', name: 'MedNode' },
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/OnlineOnly',
+    description: 'Contactar para presupuesto personalizado',
+  },
+  featureList: [
+    'Solicitud y aceptación de traslados digital',
+    'Seguimiento en tiempo real del paciente',
+    'Notificaciones automáticas entre servicios',
+    'Integración con sistema de camas',
+  ],
+};
+
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'MedNode',
+  url: 'https://mednode.es',
+  inLanguage: ['es', 'ca', 'eu', 'gl'],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />
+<script type="application/ld+json" set:html={JSON.stringify(medsign)} />
+<script type="application/ld+json" set:html={JSON.stringify(medflow)} />
+<script type="application/ld+json" set:html={JSON.stringify(website)} />
